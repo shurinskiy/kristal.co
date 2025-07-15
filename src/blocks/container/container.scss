@@ -1,0 +1,34 @@
+@use 'lib' as *;
+
+.container {
+	$self: &;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	width: min(var(--container), calc(100% - var(--gap) * 2));
+	
+	&_abs {
+		position: absolute;
+		left: max(var(--gap), calc((100% - var(--container)) / 2));
+	}
+	
+	&_right {
+		width: min(calc(100% - var(--gap)), calc(100% - (100% - var(--container)) / 2));
+		margin-right: unset;
+	}
+	
+	&_left {
+		width: min(calc(100% - var(--gap)), calc(100% - (100% - var(--container)) / 2));
+		margin-left: unset;
+	}
+	
+	&__half {
+		flex-shrink: 0;
+		width: min(calc(var(--container) / 2), 50%);
+	}
+
+	&__full {
+		flex-shrink: 0;
+		width: min(var(--container), 100%);
+	}
+}

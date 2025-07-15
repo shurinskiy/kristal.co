@@ -1,0 +1,26 @@
+$matches: (
+	xxxxlg: 1920,
+	xxxlg: 1680,
+	xxlg: 1440,
+	xlg: 1280,
+	lg: 1100,
+	md: 960,
+	sm: 780,
+	xs: 640,
+	xxs: 480,
+	xxxs: 360
+);
+
+:root {
+	--size: 16px;
+	--background: #fafafa;
+	--text: #272727;
+	--blue: #113859;
+	--blue-rgb: 17, 56, 89;
+	--container: 1400px;
+	--gap: 24px;
+	
+	@media screen and (max-width: 480px) {
+		--gap: 16px;
+	}
+}
