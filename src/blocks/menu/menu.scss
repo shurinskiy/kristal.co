@@ -1,0 +1,146 @@
+@use 'lib' as *;
+
+.menu {
+	$self: &;
+	--container: 1750px;
+	--left: max(var(--gap), calc((100% - var(--container)) / 2));
+	--top: 38px;
+	display: contents;
+
+	&__toggle {
+		@extend %reset-button;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		gap: 5px;
+		width: 55px;
+		height: 55px;
+		border-radius: 1000px;
+		background-color: var(--red);
+		position: fixed;
+		left: var(--left);
+		top: var(--top);
+		z-index: 11;
+
+		&.opened {
+			gap: 0;
+
+			span {
+				width: 43px;
+
+				&:nth-child(1) {
+					rotate: 45deg;
+					translate: 0 1px;
+				}
+		
+				&:nth-child(2) {
+					display: none;
+				}
+		
+				&:nth-child(3) {
+					rotate: -45deg;
+					translate: 0 -1px;
+				}
+			}
+		}
+
+		span {
+			height: 3px;
+			width: 30px;
+			border-radius: 10px;
+			background-color: var(--bright);
+			transition: rotate 0.3s, translate 0.3s;
+			transform-origin: center;
+		}
+	}
+
+	&__body {
+		display: none;
+		flex-flow: column nowrap;
+		align-items: center;
+		position: fixed;
+		z-index: 10;
+		top: var(--top);
+		left: var(--left);
+		// box-shadow: 0 0 10px rgba(var(--dark-rgb), 0.8);
+		background-color: rgba(26, 26, 26, 0.8);
+		border-radius: 27px 27px 10px 10px;
+		backdrop-filter: blur(8px);
+		padding: 24px 24px 64px;
+		animation: fadeIn 0.4s;
+		color: var(--bright);
+		height: 880px;
+		width: 730px;
+		font-weight: 500;
+		font-size: 28px;
+
+		&.opened {
+			display: flex;
+		}
+	}
+
+	&__lang {
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-radius: 1000px;
+		overflow: hidden;
+		flex-shrink: 0;
+		height: 55px;
+		width: 55px;
+
+		img {
+			display: block;
+		}
+	}
+
+	&__logo {
+		max-width: 140px;
+		margin-bottom: 20px;
+	}
+
+	&__links {
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: color 0.3s;
+		color: inherit;
+		padding: 16px 0;
+
+		&:hover {
+			color: var(--red);
+		}
+	}
+
+	&__contact {
+		margin-bottom: 24px;
+
+		span, a {
+			display: block;
+			padding: 8px 0;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: color 0.3s;
+			color: inherit;
+		}
+
+		a:hover {
+			color: var(--red);
+		}
+	}
+
+	&__social.social {
+		margin: auto auto 0;
+		justify-content: space-between;
+		max-width: 400px;
+		width: 100%;
+	}
+}

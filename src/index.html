@@ -1,6 +1,220 @@
 @@include("_head.html", {"id":"home"}) 
 @@include("_header.html") 
 
+<section class="hero">
+	<div class="hero__slider swiper">
+		<div class="swiper-wrapper">
+			<div class="hero__slide swiper-slide">
+				<img src="./images/hero-slide-3.webp" alt="">
+				<div class="hero__text title">Эксклюзивное предложение<br/> <span class="subtitle">удаление вмятин</span> бесплатно</div>
+			</div>
+			<div class="hero__slide swiper-slide">
+				<img src="./images/hero-slide-2.webp" alt="">
+				<div class="hero__text title title_white">Локальная покраска<br/> автомобиля</div>
+			</div>
+			<div class="hero__slide swiper-slide">
+				<img src="./images/hero-slide-1.webp" alt="">
+				<div class="hero__text title title_white">Поклейка защитной<br/> плёнки PPF</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero__navi">
+		<button class="hero__button hero__button_prev">
+			<svg><use xlink:href="#prev"></use></svg>
+		</button>
+		<a class="hero__more button button_spin" href="./">
+			<strong><svg><use xlink:href="#arr"></use></svg></strong>
+			<span>Узнать больше</span>
+		</a>
+		<button class="hero__button hero__button_next">
+			<svg><use xlink:href="#next"></use></svg>
+		</button>
+	</div>
+</section>
 
+<section class="about" id="about">
+	<div class="about__inner container">
+		<div class="about__image">
+			<img src="./images/about-image.webp" alt="">
+			<div class="about__badge">
+				<strong class="title">20+ лет</strong>
+				<span>Опыт работы в автосервисе</span>
+			</div>
+		</div>
+		<div class="about__side">
+			<h2 class="about__title title">О нас</h2>
+			<div class="about__text">Компания «Кристал» — это современный автоцентр, специализирующийся на восстановлении и защите кузова автомобилей премиум‑уровня.</div>
+			<h3 class="about__subtitle">Мы предлагаем:</h3>
+			<div class="about__points">
+				<div class="about__point">
+					<svg><use xlink:href="#tools"></use></svg>
+					<span>PDR удаление вмятин без покраски</span>
+				</div>
+				<div class="about__point">
+					<svg><use xlink:href="#paints"></use></svg>
+					<span>Нанесение PPF</span>
+				</div>
+				<div class="about__point">
+					<svg><use xlink:href="#spray"></use></svg>
+					<span>Локальная покраска</span>
+				</div>
+			</div>
+			<a class="about__button button" href="./">
+				<strong><svg><use xlink:href="#ring"></use></svg></strong>
+				<span>Связаться сейчас</span>
+			</a>
+			<div class="about__text">Мы используем профессиональные технологии и материалы, а наши мастера — опытные специалисты, которые выполняют все работы аккуратно, быстро и с вниманием к деталям. Компания «Кристалл» — ваш надёжный выбор для восстановления и защиты кузова.</div>
+		</div>
+	</div>
+</section>
+
+<section class="service">
+	<h2 class="service__title title container">Услуги</h2>
+	<div class="service__parts container">
+		<div class="service__part">
+			<h3 class="service__subtitle subtitle">
+				<svg><use xlink:href="#tools"></use></svg>
+				<span>Удаление вмятин без покраски (PDR)</span>
+			</h3>
+			<div class="service__point">
+				<div class="service__image">
+					<img src="./images/service-image-1.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/service-image-2.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/service-image-3.webp" alt="">
+				</div>
+				<div class="service__text"> — это технология восстановления кузова без повреждения заводского лакокрасочного покрытия. Метод позволяет устранить мелкие и средние вмятины, возникшие от града, ударов дверьми, незначительных ДТП и других механических воздействий. Специалист с помощью специальных инструментов аккуратно выправляет металл изнутри или снаружи, возвращая детали первоначальную форму. Услуга быстрый, доступная и сохраняет оригинальную окраску автомобиля.</div>
+				<div class="service__button">
+					<a class="button" href="./">
+						<strong><svg><use xlink:href="#ring"></use></svg></strong>
+						<span>Заказать</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="service__part">
+			<h3 class="service__subtitle subtitle">
+				<svg><use xlink:href="#spray"></use></svg>
+				<span>Локальная покраска автомобиля</span>
+			</h3>
+			<div class="service__point">
+				<div class="service__image">
+					<img src="./images/tinting-image-1.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/tinting-image-2.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/tinting-image-3.webp" alt="">
+				</div>
+				<div class="service__text"> — это восстановление повреждённого участка кузова без полной окраски детали. Процедура применяется при незначительных царапинах, сколах или потертостях. Повреждённое место зачищается, грунтуется, выравнивается и окрашивается в точный цвет авто с последующей полировкой. Такой метод экономит время , сохраняя оригинальное покрытие машины.</div>
+				<div class="service__button">
+					<a class="button" href="./">
+						<strong><svg><use xlink:href="#ring"></use></svg></strong>
+						<span>Заказать</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="service__part">
+			<h3 class="service__subtitle subtitle">
+				<svg><use xlink:href="#paints"></use></svg>
+				<span>Поклейка защитной плёнки PPF</span>
+			</h3>
+			<div class="service__point">
+				<div class="service__image">
+					<img src="./images/pasting-image-1.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/pasting-image-2.webp" alt="">
+				</div>
+				<div class="service__image">
+					<img src="./images/pasting-image-3.webp" alt="">
+				</div>
+				<div class="service__text"> — это нанесение прозрачной полиуретановой плёнки на элементы кузова для защиты от царапин, сколов, реагентов и ультрафиолета. Плёнка сохраняет внешний вид автомобиля, устойчива к повреждениям и самовосстанавливается при нагреве. Услуга подходит как для новых авто, так и для машин после полировки или локального ремонта.</div>
+				<div class="service__button">
+					<a class="button" href="./">
+						<strong><svg><use xlink:href="#ring"></use></svg></strong>
+						<span>Заказать</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="join">
+	<div class="join__inner container">
+		<h2 class="join__title subtitle">Присоединяйтесь к нам в соцсетях!</h2>
+		<div class="join__social social">
+			<a class="social__link" href="./">
+				<img src="./images/social-fboo.svg" alt="">
+			</a>
+			<a class="social__link" href="./">
+				<img src="./images/social-inst.svg" alt="">
+			</a>
+			<a class="social__link" href="./">
+				<img src="./images/social-ttok.svg" alt="">
+			</a>
+			<a class="social__link" href="./">
+				<img src="./images/social-yout.svg" alt="">
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="offer">
+	<h2 class="offer__title title container">Эксклюзивное предложение</h2>
+	<div class="offer__inner container">
+		<div class="offer__side">
+			<div class="offer__point">
+				<svg><use xlink:href="#tools"></use></svg>
+				<span class="subtitle">Удаление вмятин</span>
+				<span class="title">Бесплатно</span>
+			</div>
+			<div class="offer__reason subtitle">Никаких обращений<br/> в страховую компанию</div>
+			<a class="offer__button button" href="./">
+				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
+				<span>Получить консультацию</span>
+			</a>
+		</div>
+		<div class="offer__image">
+			<img src="./images/offer-image.webp" alt="">
+		</div>
+	</div>
+</section>
+
+<section class="subscribe">
+	<div class="subscribe__inner container">
+		<div class="subscribe__points">
+			<div class="subscribe__point">
+				<img src="./images/marker.svg" alt="">
+				<span>Без ограничения по количеству обращений в течение года</span>
+			</div>
+			<div class="subscribe__point">
+				<img src="./images/marker.svg" alt="">
+				<span>Любая работа до 3000 ₪ по прайсу — выполняется бесплатно</span>
+			</div>
+			<div class="subscribe__point">
+				<img src="./images/marker.svg" alt="">
+				<span> Подходит для всех легковых автомобилей</span>
+			</div>
+			<div class="subscribe__point">
+				<img src="./images/marker.svg" alt="">
+				<span>Подписку можно передать при продаже авто или перенести на другой автомобиль</span>
+			</div>
+		</div>
+		<div class="subscribe__side">
+			<div class="subscribe__text subtitle">Подписка всего<br/> за <span class="title">1500 ₪</span><br/> в год</div>
+			<a class="subscribe__button button button_dark" href="./">
+				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
+				<span>Получить консультацию</span>
+			</a>
+		</div>
+	</div>
+</section>
 
 @@include("_bottom.html")

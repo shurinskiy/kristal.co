@@ -13,11 +13,14 @@ $matches: (
 
 :root {
 	--size: 16px;
-	--background: #fafafa;
-	--text: #272727;
-	--blue: #113859;
-	--blue-rgb: 17, 56, 89;
-	--container: 1400px;
+	--crimson: #610B0C;
+	--ground: #161616;
+	--dark: #121212;
+	--dark-rgb: 22, 22, 22;
+	--bright: #f1f1f1;
+	--red: #AB0003;
+	--red-rgb: 171, 0, 3;
+	--container: 1460px;
 	--gap: 24px;
 	
 	@media screen and (max-width: 480px) {

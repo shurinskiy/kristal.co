@@ -1,0 +1,75 @@
+@use 'lib' as *;
+
+.service {
+	$self: &;
+	margin-bottom: 30px;
+	
+	&__title {
+		text-align: center;
+	}
+
+	&__parts {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 85px;
+	}
+
+	&__part {
+
+	}
+	
+	&__subtitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 0.9;
+		gap: 26px;
+		
+		svg {
+			fill: var(--bright);
+			aspect-ratio: 1;
+			width: 140px;
+		}
+		
+		span {
+			padding-top: 16px;
+		}
+	}
+
+	&__point {
+		display: grid;
+		grid-template-columns: 2fr 3fr 2fr;
+		align-items: center;
+		justify-items: center;
+		grid-gap: 24px 40px;
+	}
+
+	&__image {
+
+		img {
+			display: block;
+			border-radius: 10px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		min-height: 270px;
+		border-radius: 10px;
+		grid-column: span 2;
+		border: 2px solid transparent;
+		background: 
+			linear-gradient(var(--dark), var(--dark)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		text-align: center;
+		padding: 30px 30px;
+		font-size: 25px;
+		line-height: 1.37;
+	}
+
+	&__button {
+
+	}
+}

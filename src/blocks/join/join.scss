@@ -1,0 +1,22 @@
+@use 'lib' as *;
+
+.join {
+	$self: &;
+	background: url('./images/socials-bg.webp') center top / cover no-repeat transparent;
+	margin-bottom: 170px;
+
+	&__inner {
+		padding-top: 390px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__social.social {
+		margin: 0 auto;
+		justify-content: space-between;
+		max-width: 540px;
+	}
+}

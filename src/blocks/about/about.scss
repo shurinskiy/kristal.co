@@ -1,0 +1,104 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+	margin-bottom: 160px;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 35px;
+	}
+
+	&__image {
+		padding: 0 57px 112px 0;
+		position: relative;
+
+		img {
+			display: block;
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+
+	&__badge {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		width: fit-content;
+		gap: 15px;
+		padding: 28px 50px;
+		border-radius: 10px;
+		border: 2px solid transparent;
+		background: 
+			linear-gradient(var(--dark), var(--dark)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+
+		strong {
+			line-height: 1.0;
+		}
+
+		span {
+			text-transform: uppercase;
+			line-height: 1.0;
+			font-weight: 600;
+			font-size: 23px;
+		}
+	}
+
+	&__side {
+
+	}
+
+	&__title.title {
+		line-height: 0.9;
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		padding-top: 35px;
+		font-size: 24px;
+		padding-left: 85px;
+	}
+	
+	&__text {
+		font-size: 25px;
+		line-height: 1.32;
+	}
+
+	&__points {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 30px;
+		margin-bottom: 35px;
+	}
+
+	&__point {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 28px;
+		gap: 30px;
+
+		svg {
+			fill: var(--bright);
+			aspect-ratio: 1;
+			width: 55px;
+		}
+
+		span {
+			line-height: 1.0;
+			background: linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+
+	&__button {
+		margin: 0 auto 60px;
+	}
+}

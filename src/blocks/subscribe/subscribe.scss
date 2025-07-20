@@ -1,0 +1,54 @@
+@use 'lib' as *;
+
+.subscribe {
+	$self: &;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 35px;
+	}
+
+	&__points {
+		display: flex;
+		grid-column: span 1;
+		flex-flow: column nowrap;
+		padding-top: 20px;
+		gap: 40px;
+	}
+
+	&__point {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		font-size: 25px;
+		line-height: 1.4;
+	}
+
+	&__side {
+		grid-column: span 1;
+		border-radius: 10px;
+		border: 2px solid transparent;
+		background: 
+			linear-gradient(var(--dark), var(--dark)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		padding: 40px 40px 45px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: 55px;
+	}
+
+	&__text {
+		text-align: center;
+
+		span {
+			padding-top: 20px;
+			display: inline-block;
+		}
+	}
+
+	&__button {
+
+	}
+}

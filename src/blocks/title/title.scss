@@ -1,0 +1,20 @@
+@use 'lib' as *;
+
+.title {
+	$self: &;
+	display: block;
+	font-size: 80px;
+	color: var(--bright);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-family: "SC", sans-serif;
+	background: linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	
+	&_white {
+		background: none;		
+		-webkit-text-fill-color: inherit;
+		-webkit-background-clip: inherit;
+	}
+}

@@ -14,7 +14,7 @@
 );
 
 @use "../blocks/**/*.scss";
-// @use "../../node_modules/swiper/swiper";
+@use "../../node_modules/swiper/swiper";
 
 // Browsersync mark
 #__bs_notify__ { 
@@ -36,13 +36,22 @@ body { @include screen-media(); }
 // @include font-face("Montserrat-Bold", "MR", 700);
 // @include font-face("Montserrat-Thin", "MR", 100);
 
+@include font-face("SuezOne-Regular", "SO", 400);
+@include font-face("VarelaRound-Regular", "VR", 400);
+
+@include font-face("LTSuperior-SemiBold", "LS", 600);
+@include font-face("LTSuperior-Regular", "LS", 400);
+@include font-face("LTSuperior-Medium", "LS", 500);
+@include font-face("LTSuperior-Bold", "LS", 700);
+@include font-face("Sclate-Regular", "SC", 400);
+
 body, html {
 	// scrollbar-gutter: stable;
-	// scroll-behavior: smooth;	
-	background-color: var(--background);
+	scroll-behavior: smooth;
+	background-color: var(--ground);
 	font-size: var(--size);
-	color: var(--text);
-	font-family: sans-serif;
+	color: var(--bright);
+	font-family: "LS", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	display: flex;
@@ -62,26 +71,3 @@ body, html {
 p { margin-bottom: 10px; }
 em { font-style: italic; }
 strong { font-weight: bold; }
-
-.mb1 { margin-bottom: 100px; }
-.mb2 { margin-bottom: 80px; }
-.mb3 { margin-bottom: 60px; }
-.mb4 { margin-bottom: 40px; }
-.mb5 { margin-bottom: 30px; }
-
-
-@include media('<=md') {
-	.mb1 { margin-bottom: 80px; }
-	.mb2 { margin-bottom: 60px; }
-	.mb3 { margin-bottom: 40px; }
-	.mb4 { margin-bottom: 30px; }
-	.mb5 { margin-bottom: 20px; }
-}
-
-@include media('<=xxs') {
-	.mb1 { margin-bottom: 60px; }
-	.mb2 { margin-bottom: 40px; }
-	.mb3 { margin-bottom: 30px; }
-	.mb4 { margin-bottom: 20px; }
-	.mb5 { margin-bottom: 15px; }
-}

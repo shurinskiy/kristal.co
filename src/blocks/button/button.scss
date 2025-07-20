@@ -1,0 +1,70 @@
+@use 'lib' as *;
+
+.button {
+	$self: &;
+	height: 84px;
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	padding: 3px 30px 3px 4px;
+	gap: 30px;
+	border-radius: 1000px;
+	border: 3px solid var(--crimson);
+	background: 
+		linear-gradient(var(--ground), var(--ground)) padding-box,
+		linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+	transition: border-color 0.3s;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--red);
+	font-weight: 600;
+	font-size: 22px;
+
+	&_spin:hover {
+		strong svg {
+			rotate: 90deg;
+		}
+	}
+
+	&_dark {
+		background: 
+			linear-gradient(var(--dark), var(--dark)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+
+	}
+	
+	strong {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		aspect-ratio: 1;
+		border-radius: 1000px;
+		border: 5px solid var(--crimson);
+		background-color: var(--red);
+		
+		svg {
+			width: 70%;
+			height: 70%;
+			fill: var(--bright);
+			transition: rotate 0.3s;
+		}
+	}
+	
+	span {
+		padding-top: 4px;
+		color: var(--red);
+		transition: color 0.3s;
+		// background: linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		// -webkit-text-fill-color: transparent;
+		// -webkit-background-clip: text;
+	}
+	
+	&:hover {
+		border-color: transparent;
+		
+		span {
+			color: #d18f15;
+		}
+	}
+}

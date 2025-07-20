@@ -1,0 +1,16 @@
+@use 'lib' as *;
+
+.social {
+	$self: &;
+	display: flex;
+	gap: 24px;
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+
+		img {
+			display: block;
+		}
+	}
+}
