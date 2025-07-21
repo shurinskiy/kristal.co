@@ -1,0 +1,61 @@
+@use 'lib' as *;
+
+.form {
+	$self: &;
+	padding: 35px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 28px;
+	}
+
+	&__fields {
+		width: 100%;
+		max-width: 720px;
+		margin: 0 auto 40px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px 35px;
+	}
+
+	&__field {
+		display: flex;
+		grid-column: span 2;
+		flex-flow: column nowrap;
+		gap: 6px;
+
+		&_required span::after {
+			content: '*';
+			color: var(--red);
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		&_half {
+			grid-column: span 1;
+		}
+
+		span {
+			display: block;
+			font-size: 24px;
+		}
+
+		input, textarea {
+			@extend %reset-input;
+			border: 1px solid rgba(var(--bright-rgb), 0.2);
+			color: var(--bright);
+			border-radius: 10px;
+			min-height: 60px;
+			font-size: 24px;
+			padding: 10px;
+		}
+
+		textarea {
+			min-height: 185px;
+		}
+	}
+
+	&__submit {
+		margin: 0 auto;
+	}
+}

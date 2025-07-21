@@ -1,0 +1,54 @@
+@use 'lib' as *;
+
+.profit {
+	$self: &;
+	margin-bottom: 140px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 3fr 1fr 3fr;
+		grid-gap: 35px 0;
+	}
+
+	&__card {
+		grid-column: span 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column nowrap;
+		background-color: var(--dark);
+		border-radius: 10px;
+		padding: 40px 45px;
+		gap: 35px;
+		
+		img {
+			display: block;
+		}
+	}
+	
+	&__subtitle {
+		font-size: 23px;
+		line-height: 1.6;
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	
+	&__call {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column nowrap;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
+	}
+
+	&__pin {
+
+	}
+}

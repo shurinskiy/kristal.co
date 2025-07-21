@@ -1,0 +1,29 @@
+@use 'lib' as *;
+
+.pin {
+	$self: &;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--crimson);
+	border-radius: 1000px;
+	position: relative;
+	aspect-ratio: 1;
+	width: 155px;
+
+	&::before {
+		content: '';
+		display: block;
+		border-radius: 1000px;
+		background-color: var(--red);
+		position: absolute;
+		inset: 7.5%;
+	}
+
+	svg {
+		fill: var(--bright);
+		height: 55%;
+		width: 55%;
+		z-index: 1;
+	}
+}

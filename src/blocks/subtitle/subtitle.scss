@@ -9,10 +9,4 @@
 	text-transform: uppercase;
 	font-family: "SC", sans-serif;
 	-webkit-text-fill-color: var(--bright);
-
-	&_grd {
-		background: linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-	}
 }

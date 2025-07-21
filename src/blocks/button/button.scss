@@ -19,6 +19,7 @@
 	color: var(--red);
 	font-weight: 600;
 	font-size: 22px;
+	cursor: pointer;
 
 	&_spin:hover {
 		strong svg {
@@ -31,6 +32,14 @@
 			linear-gradient(var(--dark), var(--dark)) padding-box,
 			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
 
+	}
+
+	&_hero {
+		background: none;
+
+		&:hover {
+			border-color: #a5700e !important;
+		}
 	}
 	
 	strong {
@@ -65,6 +74,26 @@
 		
 		span {
 			color: #d18f15;
+		}
+	}
+
+	&_book {
+		border: 3px solid var(--bright);
+		background: 
+			linear-gradient(var(--crimson), var(--crimson)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+
+		strong {
+			border: 5px solid #B89596;
+			background-color: var(--bright);
+		
+			svg {
+				fill: var(--crimson);
+			}
+		}
+
+		span {
+			color: var(--bright);
 		}
 	}
 }

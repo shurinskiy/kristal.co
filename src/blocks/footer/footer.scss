@@ -1,0 +1,120 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+	--logo: 240px;
+
+	&__book {
+		position: relative;
+		margin-bottom: -120px;
+		z-index: 1;
+
+		&.container {
+			--container: 1215px;
+		}
+	}
+
+	&__inner {
+		background-color: var(--dark);
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		padding: 200px 0 125px;
+	}
+
+	&__left {
+		display: flex;
+		flex-flow: column nowrap;
+		width: calc(50% - (var(--logo) / 2));
+		max-width: 440px;
+		gap: 45px;
+	}
+
+	&__navi {
+		display: flex;
+		justify-content: space-between;
+		font-size: 25px;
+		gap: 20px;
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__contact {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__pin {
+		width: 65px;
+	}
+
+	&__phone {
+		margin-left: auto;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+
+		span {
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			font-weight: 600;
+			font-size: 23px;
+		}
+		
+		a {
+			font-size: 28px;
+			color: var(--bright);
+			text-decoration: none;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 70px;
+		left: calc(50% - (var(--logo) / 2));
+		width: var(--logo);
+		z-index: 2;
+	}
+
+	&__right {
+		display: flex;
+		flex-flow: column nowrap;
+		width: calc(50% - (var(--logo) / 2));
+		max-width: 455px;
+		gap: 45px;
+	}
+
+	&__subscribe {
+		font-size: 28px;
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__social.social {
+		justify-content: space-between;
+	}
+
+	&__bottom {
+		padding: 0 var(--gap);
+		height: 165px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-top: 5px solid var(--ground);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			font-size: 20px;
+		}
+	}
+}

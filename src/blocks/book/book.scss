@@ -1,0 +1,21 @@
+@use 'lib' as *;
+
+.book {
+	$self: &;
+	background-color: var(--crimson);
+	border-radius: 10px;
+	padding: 68px 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+
+	&__title {
+		text-align: center;
+		line-height: 1.35;
+	}
+
+	&__button {
+
+	}
+}
