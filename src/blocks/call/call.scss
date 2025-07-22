@@ -1,0 +1,81 @@
+@use 'lib' as *;
+
+.call {
+	$self: &;
+	--border: 6px;
+	--width: 65px;
+	--height: 65px;
+	--opened: 233px;
+	--container: 1750px;
+	--ground: var(--red);
+	--line: var(--crimson);
+
+	width: var(--width);
+	height: var(--height);
+	transition: height 0.4s;
+	right: max(var(--gap), calc((100% - var(--container)) / 2));
+	position: fixed;
+	bottom: 150px;
+	z-index: 1;
+	
+	&.opened {
+		--line: #c5c5c5;
+		--ground: var(--bright);
+		--height: var(--opened);
+
+		#{$self}__pin:nth-child(2) {
+			top: calc(var(--width) + 10px);
+		}
+
+		#{$self}__toggle svg {
+			&:nth-child(1) {
+				display: none;
+			}
+
+			&:nth-child(2) {
+				display: block;
+			}
+		}
+	}
+	
+	&__pin {
+		width: 100%;
+		transition: top 0.4s;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+	}
+
+	&__toggle {
+		@extend %reset-button;
+		width: calc(100% + 20px);
+		border: var(--border) solid var(--line);
+		background-color: var(--ground);
+		transition: background-color 0.4s, border-color 0.4s;
+		border-radius: 1000px;
+		position: absolute;
+		aspect-ratio: 1;
+		bottom: -10px;
+		left: -10px;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			animation: fadeIn 0.4s;
+			aspect-ratio: 1;
+			width: 60%;
+			
+			&:nth-child(1) {
+				fill: var(--bright);
+			}
+			
+			&:nth-child(2) {
+				fill: var(--red);
+				display: none;
+			}
+		}
+	}
+}

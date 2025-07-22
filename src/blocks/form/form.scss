@@ -43,6 +43,7 @@
 		input, textarea {
 			@extend %reset-input;
 			border: 1px solid rgba(var(--bright-rgb), 0.2);
+			transition: border-color 0.3s, box-shadow 0.3s;
 			color: var(--bright);
 			border-radius: 10px;
 			min-height: 60px;
@@ -52,6 +53,11 @@
 
 		textarea {
 			min-height: 185px;
+		}
+
+		&.error input, &.error textarea {
+			border-color: var(--red);
+			box-shadow: 0 0 10px rgba(var(--red-rgb), 0.5);
 		}
 	}
 
