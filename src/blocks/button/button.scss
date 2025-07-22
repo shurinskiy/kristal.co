@@ -78,9 +78,7 @@
 	&:hover {
 		border-color: transparent;
 		
-		span {
-			color: #d18f15;
-		}
+		span { color: #d18f15; }
 	}
 
 	&_book {
@@ -93,23 +91,15 @@
 			border: 5px solid #B89596;
 			background-color: var(--bright);
 		
-			svg {
-				fill: var(--crimson);
-			}
+			svg { fill: var(--crimson); }
 		}
 
-		span {
-			color: var(--bright);
-		}
+		span { color: var(--bright); }
 	}
 
 	&_pending strong {
-		svg {
-			display: none;
-		}
+		svg { display: none; }
 
-		img {
-			display: block;
-		}
+		img { display: block; }
 	}
 }

@@ -1,0 +1,60 @@
+@use 'lib' as *;
+
+.point {
+	$self: &;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 24px;
+	
+	&__images.swiper {
+		
+		.swiper-wrapper {
+			display: grid;
+			grid-template-columns: 2fr 3fr 2fr;
+			justify-items: center;
+			align-items: center;
+			grid-gap: 24px 40px;
+		}
+
+		.swiper-slide {
+			height: auto;
+		}
+	}
+
+	&__image {
+
+		img {
+			display: block;
+			border-radius: 10px;
+		}
+	}
+
+	&__bottom {
+		display: grid;
+		grid-template-columns: 2fr 3fr 2fr;
+		justify-items: center;
+		align-items: center;
+		grid-gap: 24px 40px;
+	}
+
+	&__text {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		min-height: 270px;
+		border-radius: 10px;
+		grid-column: span 2;
+		border: 2px solid transparent;
+		background: 
+			linear-gradient(var(--dark), var(--dark)) padding-box,
+			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		text-align: center;
+		padding: 30px 30px;
+		font-size: 25px;
+		line-height: 1.37;
+	}
+
+	&__button {
+
+	}
+}

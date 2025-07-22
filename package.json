@@ -69,6 +69,7 @@
 		"suffix": "$self: &;"
 	},
 	"dependencies": {
+		"enquire.js": "^2.1.6",
 		"swiper": "^11.2.10"
 	}
 }
