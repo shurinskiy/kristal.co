@@ -8,6 +8,12 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 35px;
+		
+		@include media('<=sm') {
+			display: flex;
+			flex-flow: column nowrap;
+			grid-gap: 60px;
+		}
 	}
 
 	&__points {
@@ -16,6 +22,16 @@
 		flex-flow: column nowrap;
 		padding-top: 15px;
 		gap: 32px;
+
+		@include media('<=sm') {
+			margin: 0 auto;
+			max-width: 550px;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 330px;
+			gap: 24px;
+		}
 	}
 
 	&__point {
@@ -24,9 +40,33 @@
 		gap: 42px;
 		font-size: 20px;
 		line-height: 1.4;
+		
+		@include media('<=xlg') {
+			gap: 35px;
+		}
+		
+		@include media('<=lg') {
+			font-size: 19px;
+		}
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
 
 		img {
 			width: 60px;
+			
+			@include media('<=xlg') {
+				width: 50px;
+			}
+			
+			@include media('<=md') {
+				width: 45px;
+			}
+			
+			@include media('<=xxs') {
+				width: 30px;
+			}
 		}
 	}
 
@@ -42,6 +82,17 @@
 		flex-flow: column nowrap;
 		align-items: center;
 		gap: 38px;
+
+		@include media('<=sm') {
+			max-width: 550px;
+			margin: 0 auto;
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			padding: 30px 30px 42px;
+			gap: 20px;
+		}
 	}
 
 	&__text {
@@ -54,6 +105,6 @@
 	}
 
 	&__button {
-
+		margin-top: auto;
 	}
 }

@@ -4,14 +4,30 @@
 	$self: &;
 	background: url('./images/socials-bg.webp') center top / cover no-repeat transparent;
 	margin-bottom: 130px;
-
-	&__inner {
-		padding-top: 300px;
+	
+	@include media('<=xxs') {
+		background-position: center top 40px;
+		background-size: calc(100% + 380px) auto;
+		margin-bottom: 95px;
 	}
 
-	&__title {
+	&__inner.container {
+		padding-top: 300px;
+		
+		@include media('<=xxs') {
+			padding-top: 215px;
+			--container: 270px;
+		}
+	}
+
+	&__title.subtitle {
 		text-align: center;
 		margin-bottom: 40px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 30px;
+			line-height: 1.28;
+		}
 	}
 
 	&__social.social {

@@ -7,6 +7,10 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 22px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 32px;
+		}
 	}
 
 	&__fields {
@@ -16,6 +20,10 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px 27px;
+
+		@include media('<=md') {
+			max-width: none;
+		}
 	}
 
 	&__field {
@@ -33,6 +41,18 @@
 
 		&_half {
 			grid-column: span 1;
+			
+			@include media('<=lg') {
+				grid-column: span 2;
+			}
+			
+			@include media('<=md') {
+				grid-column: span 1;
+			}
+			
+			@include media('<=xs') {
+				grid-column: span 2;
+			}
 		}
 
 		span {
@@ -45,9 +65,9 @@
 			border: 1px solid rgba(var(--bright-rgb), 0.2);
 			transition: border-color 0.3s, box-shadow 0.3s;
 			color: var(--bright);
-			border-radius: 10px;
+			border-radius: 8px;
 			min-height: 45px;
-			font-size: 24px;
+			font-size: 20px;
 			padding: 10px;
 			width: 100%;
 		}

@@ -10,11 +10,19 @@
 		justify-content: space-between;
 		margin-bottom: 110px;
 		gap: 16px;
+
+		@include media('<=lg') {
+			justify-content: center;
+		}
+
+		@include media('<=md') {
+			display: none;
+		}
 		
 		&.container {
 			--container: 860px;
 		}
-
+		
 		span.subtitle {
 			padding-top: 10px;
 		}
@@ -22,23 +30,49 @@
 
 	&__pin {
 		width: 82px;
+		
+		@include media('<=lg') {
+			width: 75px;
+		}
 	}
 
 	&__inner {
 		display: flex;
 		gap: 30px;
+		
+		@include media('<=md') {
+			flex-flow: column nowrap;
+			gap: 90px;
+		}
+		
+		@include media('<=xxs') {
+			gap: 32px;
+		}
 	}
 
 	&__side {
 		display: flex;
+		flex-shrink: 0;
 		flex-flow: column nowrap;
 		padding-top: 20px;
-		width: 380px;
+		max-width: 380px;
+		width: 100%;
 		gap: 63px;
+		
+		@include media('<=md') {
+			margin: 0 auto;
+		}
+		
+		@include media('<=xxs') {
+			gap: 35px;
+		}
 	}
-
+	
 	&__subtitle {
 
+		@include media('<=md') {
+			text-align: center;
+		}
 	}
 
 	&__points {
@@ -46,6 +80,11 @@
 		flex-flow: column nowrap;
 		margin-bottom: 25px;
 		gap: 30px;
+		
+		@include media('<=xxs') {
+			margin: 0 auto;
+			gap: 32px;
+		}
 	}
 
 	&__point {
@@ -57,6 +96,10 @@
 			fill: var(--red);
 			aspect-ratio: 1;
 			width: 40px;
+			
+			@include media('<=xxs') {
+				width: 45px;
+			}
 		}
 
 		a, span {
@@ -65,6 +108,10 @@
 			text-decoration: none;
 			font-size: 21px;
 			line-height: 1.4;
+			
+			@include media('<=xxs') {
+				font-size: 20px;
+			}
 		}
 
 		a:hover {
@@ -75,6 +122,12 @@
 	&__social.social {
 		justify-content: space-between;
 		max-width: 355px;
+		width: 100%;
+		
+		@include media('<=xxs') {
+			max-width: 300px;
+			margin: 0 auto;
+		}
 	}
 
 	&__form {

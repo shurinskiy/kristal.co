@@ -3,6 +3,10 @@
 .offer {
 	$self: &;
 	margin-bottom: 95px;
+	
+	@include media('<=xxs') {
+		margin-bottom: 24px;
+	}
 
 	&__title {
 		text-align: center;
@@ -13,6 +17,16 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 35px;
+		
+		@include media('<=sm') {
+			display: flex;
+			flex-flow: column nowrap;
+			grid-gap: 55px;
+		}
+		
+		@include media('<=xxs') {
+			grid-gap: 73px;
+		}
 	}
 
 	&__side {
@@ -22,10 +36,24 @@
 		align-items: center;
 		gap: 73px;
 
+		@include media('<=sm') {
+			gap: 35px;
+		}
+
+		@include media('<=xxs') {
+			max-width: 340px;
+			margin: 0 auto;
+			gap: 20px;
+		}
+
 		svg {
 			fill: var(--bright);
 			aspect-ratio: 1;
 			width: 100px;
+
+			@include media('<=xxs') {
+				width: 62px;
+			}
 		}
 	}
 	
@@ -50,6 +78,11 @@
 		grid-column: span 1;
 		border-radius: 10px;
 		overflow: hidden;
+
+		@include media('<=sm') {
+			max-width: 550px;
+			margin: 0 auto;
+		}
 
 		img {
 			width: 100%;
