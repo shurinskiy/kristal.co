@@ -2,18 +2,26 @@
 
 .point {
 	$self: &;
-	display: flex;
-	flex-flow: column nowrap;
-	gap: 24px;
 	
 	&__images.swiper {
+		margin-bottom: 18px;
+		
+		@include media('<=sm') {
+			margin-left: calc(var(--gap) * -1);
+			margin-right: calc(var(--gap) * -1);
+			padding-left: var(--gap);
+			padding-right: var(--gap);
+			margin-bottom: 24px;
+		}
 		
 		.swiper-wrapper {
-			display: grid;
-			grid-template-columns: 2fr 3fr 2fr;
-			justify-items: center;
-			align-items: center;
-			grid-gap: 24px 40px;
+			@include media('>sm') {
+				display: grid;
+				grid-template-columns: 2fr 3fr 2fr;
+				justify-items: center;
+				align-items: center;
+				grid-gap: 20px 30px;
+			}
 		}
 
 		.swiper-slide {
@@ -23,9 +31,21 @@
 
 	&__image {
 
+		@include media('<=sm') {
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
 		img {
 			display: block;
 			border-radius: 10px;
+			
+			@include media('<=sm') {
+				border-radius: 0;
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 
@@ -34,14 +54,18 @@
 		grid-template-columns: 2fr 3fr 2fr;
 		justify-items: center;
 		align-items: center;
-		grid-gap: 24px 40px;
+		grid-gap: 20px 30px;
+
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
 	&__text {
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
-		min-height: 270px;
+		min-height: 220px;
 		border-radius: 10px;
 		grid-column: span 2;
 		border: 2px solid transparent;
@@ -49,9 +73,20 @@
 			linear-gradient(var(--dark), var(--dark)) padding-box,
 			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
 		text-align: center;
-		padding: 30px 30px;
-		font-size: 25px;
+		padding: 15px 22px;
+		font-size: 20px;
 		line-height: 1.37;
+		
+		@include media('<=sm') {
+			margin-bottom: 28px;
+			font-size: 18px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 23px 20px 18px;
+			letter-spacing: 0.03em;
+			line-height: 1.29;
+		}
 	}
 
 	&__button {

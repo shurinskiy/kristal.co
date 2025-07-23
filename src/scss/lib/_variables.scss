@@ -21,10 +21,10 @@ $matches: (
 	--bright-rgb: 241, 241, 241;
 	--red: #AB0003;
 	--red-rgb: 171, 0, 3;
-	--container: 1460px;
+	--container: 1170px;
 	--gap: 24px;
 	
 	@media screen and (max-width: 480px) {
-		--gap: 16px;
+		// --gap: 16px;
 	}
 }

@@ -3,20 +3,32 @@
 .call {
 	$self: &;
 	--border: 6px;
-	--width: 65px;
-	--height: 65px;
-	--opened: 233px;
-	--container: 1750px;
+	--width: 55px;
+	--height: 55px;
+	--offset: 10px;
+	--opened: 205px;
+	--container: 1400px;
 	--ground: var(--red);
 	--line: var(--crimson);
-
+	
 	width: var(--width);
 	height: var(--height);
 	transition: height 0.4s;
 	right: max(var(--gap), calc((100% - var(--container)) / 2));
 	position: fixed;
-	bottom: 150px;
+	bottom: 18.7%;
 	z-index: 2;
+	
+	@include media('<=xlg') {
+		bottom: 5%;
+	}
+	
+	@include media('<=xxs') {
+		--offset: 5px;
+		--opened: 165px;
+		--height: 45px;
+		--width: 45px;
+	}
 	
 	&.opened {
 		--line: #c5c5c5;
@@ -49,15 +61,15 @@
 
 	&__toggle {
 		@extend %reset-button;
-		width: calc(100% + 20px);
+		width: calc(100% + var(--offset) * 2);
 		border: var(--border) solid var(--line);
 		background-color: var(--ground);
 		transition: background-color 0.4s, border-color 0.4s;
 		border-radius: 1000px;
 		position: absolute;
 		aspect-ratio: 1;
-		bottom: -10px;
-		left: -10px;
+		bottom: calc(var(--offset) * -1);
+		left: calc(var(--offset) * -1);
 		z-index: 1;
 		display: flex;
 		align-items: center;

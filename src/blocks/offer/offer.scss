@@ -2,7 +2,7 @@
 
 .offer {
 	$self: &;
-	margin-bottom: 120px;
+	margin-bottom: 95px;
 
 	&__title {
 		text-align: center;
@@ -20,12 +20,12 @@
 		grid-column: span 1;
 		flex-flow: column nowrap;
 		align-items: center;
-		gap: 95px;
+		gap: 73px;
 
 		svg {
 			fill: var(--bright);
 			aspect-ratio: 1;
-			width: 130px;
+			width: 100px;
 		}
 	}
 	
@@ -33,8 +33,8 @@
 		display: flex;
 		align-items: center;
 		flex-flow: column nowrap;
-		gap: 15px;
 		text-align: center;
+		gap: 15px;
 	}
 	
 	&__reason {

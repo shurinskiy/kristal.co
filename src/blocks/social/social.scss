@@ -10,7 +10,12 @@
 		color: inherit;
 
 		img {
+			max-width: 50px;
 			display: block;
+			
+			@include media('<=xxs') {
+				max-width: 40px;
+			}
 		}
 	}
 }

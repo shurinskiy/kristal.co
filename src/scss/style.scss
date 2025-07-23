@@ -49,14 +49,14 @@ body, html {
 	// scrollbar-gutter: stable;
 	scroll-behavior: smooth;
 	background-color: var(--ground);
+	font-family: "LS", sans-serif;
 	font-size: var(--size);
 	color: var(--bright);
-	font-family: "LS", sans-serif;
+	min-height: 100vh;
 	line-height: 1.2;
 	font-weight: 400;
 	display: flex;
 	flex-flow: column nowrap;
-	min-height: 100vh;
 }
 
 .footer {

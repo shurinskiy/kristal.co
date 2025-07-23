@@ -3,10 +3,10 @@
 .join {
 	$self: &;
 	background: url('./images/socials-bg.webp') center top / cover no-repeat transparent;
-	margin-bottom: 170px;
+	margin-bottom: 130px;
 
 	&__inner {
-		padding-top: 390px;
+		padding-top: 300px;
 	}
 
 	&__title {
@@ -17,6 +17,6 @@
 	&__social.social {
 		margin: 0 auto;
 		justify-content: space-between;
-		max-width: 540px;
+		max-width: 430px;
 	}
 }

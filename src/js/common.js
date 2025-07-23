@@ -1,5 +1,5 @@
 import { throttle } from "./libs/utils";
-// import { driveAdaptive } from "./libs/driveAdaptive.js";
+import { driveAdaptive } from "./libs/driveAdaptive.js";
 import "./polyfills.js";
 import "./blocks.js";
 
@@ -22,7 +22,7 @@ function updateVH() {
 updateVH();
 
 // Динамический адаптив
-/* new driveAdaptive({
+new driveAdaptive({
 	type: 'max',
 	className: 'moved',
 	aliases: {
@@ -37,4 +37,4 @@ updateVH();
 		xxxlg: 1680,
 		xxxxlg: 1920
 	}
-}); */
+});

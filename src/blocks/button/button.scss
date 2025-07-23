@@ -2,25 +2,36 @@
 
 .button {
 	$self: &;
-	height: 84px;
+	height: 70px;
 	display: flex;
 	width: fit-content;
 	align-items: center;
-	padding: 3px 30px 3px 4px;
-	gap: 30px;
+	padding: 3px 24px 3px 4px;
+	gap: 24px;
 	border-radius: 1000px;
 	border: 3px solid var(--crimson);
 	background: 
-		linear-gradient(var(--ground), var(--ground)) padding-box,
-		linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+	linear-gradient(var(--ground), var(--ground)) padding-box,
+	linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
 	transition: border-color 0.3s;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--red);
 	font-weight: 600;
-	font-size: 22px;
+	font-size: 20px;
 	cursor: pointer;
 	
+	@include media('<=xxlg') {
+		height: 62px;
+		font-size: 18px;
+		border-width: 2px;
+		padding: 3px 24px 3px 3px;
+	}
+
+	@include media('<=xxs') {
+		font-size: 15px;
+	}
+
 	strong {
 		display: flex;
 		align-items: center;

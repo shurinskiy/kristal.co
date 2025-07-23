@@ -2,10 +2,14 @@
 
 .header {
 	$self: &;
-	--logo: 215px;
-	position: relative;
+	--logo: #{fluid(170px, 80px, xlg, md)};
 	background-color: rgba(var(--dark-rgb), 0.9);
+	position: relative;
 	z-index: 2;
+
+	@include media('<=md') {
+		background-color: transparent;
+	}
 	
 	&::before {
 		display: block;
@@ -14,16 +18,25 @@
 		backdrop-filter: blur(15px);
 		z-index: -1;
 		inset: 0;
+
+		@include media('<=md') {
+			display: none;
+		}
 	}
 
 	&__inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		height: 130px;
-
+		height: 105px;
+		
 		&.container {
-			--container: 1750px;
+			--container: 1400px;
+		}
+		
+		@include media('<=xxs') {
+			align-items: flex-end;
+			height: 88px;
 		}
 	}
 
@@ -32,12 +45,20 @@
 		align-items: center;
 		justify-content: flex-end;
 		background-color: rgba(var(--red-rgb), 0.3);
-		width: calc(50% - (var(--logo) / 2));
+		width: calc(50% - (var(--logo) / 2) - 20px);
 		border-radius: 1000px;
-		padding: 0 40px 0 70px;
-		max-width: 628px;
-		height: 55px;
+		padding: 0 30px 0 50px;
+		max-width: 500px;
+		height: 45px;
 		gap: 30px;
+		
+		@include media('<=lg') {
+			height: 40px;
+		}
+		
+		@include media('<=md') {
+			display: none;
+		}
 	}
 
 	&__toggle {
@@ -49,48 +70,66 @@
 		align-items: center;
 		margin-left: auto;
 		padding-top: 4px;
-		gap: 30px;
+		gap: 25px;
+		
+		@include media('<=lg') {
+			height: 40px;
+			gap: 20px;
+		}
 	}
 
 	&__link {
 		color: var(--bright);
 		text-decoration: none;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: fluid(19px, 16px, xlg, md);
 	}
 
 	&__logo {
 		width: var(--logo);
 		position: absolute;
 		left: calc(50% - (var(--logo) / 2));
-		top: 42px;
+		top: 35px;
+
+		@include media('<=md') {
+			display: none;
+		}
 	}
 
 	&__side {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: calc(50% - (var(--logo) / 2));
-		max-width: 628px;
-		padding-top: 4px;
+		width: calc(50% - (var(--logo) / 2) - 20px);
+		max-width: 500px;
+		
+		@include media('<=md') {
+			width: auto;
+			margin-left: auto;
+		}
 	}
-
+	
 	&__contact {
 		display: flex;
 		align-items: center;
+		padding-top: 4px;
 		gap: 15px;
+
+		@include media('<=md') {
+			display: none;
+		}
 
 		span {
 			text-transform: uppercase;
 			font-weight: 600;
-			font-size: 23px;
+			font-size: fluid(18px, 15px, xlg, md);
 		}
-
+		
 		a {
 			text-decoration: none;
 			color: var(--bright);
 			font-weight: 500;
-			font-size: 28px;
+			font-size: fluid(22px, 19px, xlg, md);
 		}
 	}
 
@@ -98,8 +137,8 @@
 		border-radius: 1000px;
 		overflow: hidden;
 		flex-shrink: 0;
-		height: 55px;
-		width: 55px;
+		aspect-ratio: 1;
+		width: 45px;
 
 		img {
 			display: block;

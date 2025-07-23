@@ -6,23 +6,23 @@
 
 	&__title {
 		text-align: center;
-		margin-bottom: 28px;
+		margin-bottom: 22px;
 	}
 
 	&__fields {
 		width: 100%;
-		max-width: 720px;
-		margin: 0 auto 40px;
+		max-width: 580px;
+		margin: 0 auto 30px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 24px 35px;
+		grid-gap: 20px 27px;
 	}
 
 	&__field {
 		display: flex;
 		grid-column: span 2;
 		flex-flow: column nowrap;
-		gap: 6px;
+		gap: 4px;
 
 		&_required span::after {
 			content: '*';
@@ -37,7 +37,7 @@
 
 		span {
 			display: block;
-			font-size: 24px;
+			font-size: 19px;
 		}
 
 		input, textarea {
@@ -46,13 +46,14 @@
 			transition: border-color 0.3s, box-shadow 0.3s;
 			color: var(--bright);
 			border-radius: 10px;
-			min-height: 60px;
+			min-height: 45px;
 			font-size: 24px;
 			padding: 10px;
+			width: 100%;
 		}
 
 		textarea {
-			min-height: 185px;
+			min-height: 150px;
 		}
 
 		&.error input, &.error textarea {

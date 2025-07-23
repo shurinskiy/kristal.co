@@ -2,7 +2,7 @@
 
 .subscribe {
 	$self: &;
-	margin-bottom: 125px;
+	margin-bottom: 100px;
 
 	&__inner {
 		display: grid;
@@ -14,16 +14,20 @@
 		display: flex;
 		grid-column: span 1;
 		flex-flow: column nowrap;
-		padding-top: 20px;
-		gap: 40px;
+		padding-top: 15px;
+		gap: 32px;
 	}
 
 	&__point {
 		display: flex;
 		align-items: center;
-		gap: 50px;
-		font-size: 25px;
+		gap: 42px;
+		font-size: 20px;
 		line-height: 1.4;
+
+		img {
+			width: 60px;
+		}
 	}
 
 	&__side {
@@ -33,11 +37,11 @@
 		background: 
 			linear-gradient(var(--dark), var(--dark)) padding-box,
 			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
-		padding: 40px 40px 45px;
+		padding: 30px 30px 35px;
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
-		gap: 55px;
+		gap: 38px;
 	}
 
 	&__text {

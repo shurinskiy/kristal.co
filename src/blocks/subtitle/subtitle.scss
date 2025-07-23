@@ -3,10 +3,10 @@
 .subtitle {
 	$self: &;
 	display: block;
-	font-size: 50px;
 	color: var(--bright);
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
+	font-size: fluid(40px, 25px, xlg, xxs);
 	font-family: "SC", sans-serif;
 	-webkit-text-fill-color: var(--bright);
 }

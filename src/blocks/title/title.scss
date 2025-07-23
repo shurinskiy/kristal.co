@@ -3,7 +3,7 @@
 .title {
 	$self: &;
 	display: block;
-	font-size: 80px;
+	font-size: fluid(64px, 35px, xlg, xxs);
 	color: var(--bright);
 	letter-spacing: 0.05em;
 	text-transform: uppercase;

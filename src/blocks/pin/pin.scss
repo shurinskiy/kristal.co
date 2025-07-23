@@ -3,13 +3,14 @@
 .pin {
 	$self: &;
 	display: flex;
+	flex-shrink: 0;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--crimson);
 	border-radius: 1000px;
 	position: relative;
 	aspect-ratio: 1;
-	width: 155px;
+	width: 100px;
 
 	&::before {
 		content: '';

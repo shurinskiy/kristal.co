@@ -2,10 +2,14 @@
 
 .menu {
 	$self: &;
-	--container: 1750px;
+	--container: 1400px;
 	--left: max(var(--gap), calc((100% - var(--container)) / 2));
-	--top: 38px;
+	--top: 30px;
 	display: contents;
+	
+	@include media('<=xxs') {
+		--top: 43px;
+	}
 
 	&__toggle {
 		@extend %reset-button;
@@ -15,8 +19,8 @@
 		align-items: center;
 		flex-shrink: 0;
 		gap: 5px;
-		width: 55px;
-		height: 55px;
+		width: 45px;
+		aspect-ratio: 1;
 		border-radius: 1000px;
 		background-color: var(--red);
 		position: fixed;
@@ -28,7 +32,7 @@
 			gap: 0;
 
 			span {
-				width: 43px;
+				width: 35px;
 
 				&:nth-child(1) {
 					rotate: 45deg;
@@ -47,8 +51,8 @@
 		}
 
 		span {
-			height: 3px;
-			width: 30px;
+			height: 2px;
+			width: 24px;
 			border-radius: 10px;
 			background-color: var(--bright);
 			transition: rotate 0.3s, translate 0.3s;
@@ -66,15 +70,45 @@
 		left: var(--left);
 		// box-shadow: 0 0 10px rgba(var(--dark-rgb), 0.8);
 		background-color: rgba(26, 26, 26, 0.8);
-		border-radius: 27px 27px 10px 10px;
+		border-radius: 23px 23px 8px 8px;
 		backdrop-filter: blur(8px);
 		padding: 24px 24px 64px;
 		animation: fadeIn 0.4s;
 		color: var(--bright);
-		height: 880px;
-		width: 730px;
+		width: min(var(--container), calc(100% - var(--gap) * 2));
+		max-width: 580px;
+		height: 720px;
+		font-size: 22px;
 		font-weight: 500;
-		font-size: 28px;
+		
+		@include media('<=xxs') {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100vh;
+			border-radius: 0;
+			overflow-y: auto;
+			padding: 90px 24px 30px;
+			justify-content: space-between;
+		}
+
+		&::-webkit-scrollbar {
+			width: 3px;
+			height: 3px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: var(--crimson);
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--red);
+			border-radius: 0px;
+		}
+		
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}		
 
 		&.opened {
 			display: flex;
@@ -87,9 +121,14 @@
 		top: 0;
 		border-radius: 1000px;
 		overflow: hidden;
+		aspect-ratio: 1;
 		flex-shrink: 0;
-		height: 55px;
-		width: 55px;
+		width: 45px;
+
+		@include media('<=xxs') {
+			right: var(--gap);
+			top: var(--top);
+		}
 
 		img {
 			display: block;
@@ -97,12 +136,12 @@
 	}
 
 	&__logo {
-		max-width: 140px;
-		margin-bottom: 20px;
+		max-width: 110px;
+		margin-bottom: 15px;
 	}
 
 	&__links {
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 	}
 
 	&__link {
@@ -112,7 +151,7 @@
 		text-transform: uppercase;
 		transition: color 0.3s;
 		color: inherit;
-		padding: 16px 0;
+		padding: 13px 0;
 
 		&:hover {
 			color: var(--red);
@@ -120,11 +159,11 @@
 	}
 
 	&__contact {
-		margin-bottom: 24px;
+		margin-bottom: 40px;
 
 		span, a {
 			display: block;
-			padding: 8px 0;
+			padding: 7px 0;
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -140,7 +179,11 @@
 	&__social.social {
 		margin: auto auto 0;
 		justify-content: space-between;
-		max-width: 400px;
+		max-width: 310px;
 		width: 100%;
+		
+		@include media('<=xxs') {
+			max-width: 290px;
+		}
 	}
 }
