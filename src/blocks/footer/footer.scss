@@ -3,6 +3,14 @@
 .footer {
 	$self: &;
 	--logo: 190px;
+	
+	@include media('<=lg') {
+		--logo: 170px;
+	}
+	
+	@include media('<=xxs') {
+		--logo: 155px;
+	}
 
 	&__book {
 		position: relative;
@@ -11,6 +19,10 @@
 
 		&.container {
 			--container: 975px;
+			
+			@include media('<=md') {
+				--container: 500px;
+			}
 		}
 	}
 
@@ -24,6 +36,16 @@
 		justify-content: space-between;
 		position: relative;
 		padding: 160px 0 100px;
+		
+		@include media('<=md') {
+			flex-flow: column nowrap;
+			padding: 60px 0 100px;
+			gap: 30px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 60px 0 80px;
+		}
 	}
 
 	&__left {
@@ -32,6 +54,10 @@
 		width: calc(50% - (var(--logo) / 2));
 		max-width: 355px;
 		gap: 35px;
+
+		@include media('<=md') {
+			width: 100%;
+		}
 	}
 
 	&__navi {
@@ -39,6 +65,12 @@
 		justify-content: space-between;
 		font-size: 20px;
 		gap: 15px;
+		
+		@include media('<=md') {
+			flex-flow: column nowrap;
+			align-items: center;
+			font-size: 25px;
+		}
 	}
 
 	&__link {
@@ -49,11 +81,24 @@
 	&__contact {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 35px 10px;
+
+		@include media('<=md') {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__pin {
 		width: 52px;
+		
+		@include media('<=md') {
+			width: 65px;
+		}
 	}
 
 	&__phone {
@@ -61,18 +106,37 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
+		align-items: center;
+
+		@include media('<=md') {
+			width: 100%;
+			margin: 0;
+			order: -1;
+		}
 
 		span {
 			text-transform: uppercase;
 			margin-bottom: 8px;
 			font-weight: 600;
 			font-size: 19px;
+			
+			@include media('<=md') {
+				font-size: 24px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 15px;
+			}
 		}
 		
 		a {
 			font-size: 23px;
 			color: var(--bright);
 			text-decoration: none;
+
+			@include media('<=md') {
+				font-size: 24px;
+			}
 		}
 	}
 
@@ -82,6 +146,11 @@
 		left: calc(50% - (var(--logo) / 2));
 		width: var(--logo);
 		z-index: 2;
+
+		@include media('<=md') {
+			position: static;
+			order: -1;
+		}
 	}
 
 	&__right {
@@ -90,6 +159,15 @@
 		width: calc(50% - (var(--logo) / 2));
 		max-width: 360px;
 		gap: 40px;
+		
+		@include media('<=md') {
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 300px;
+			gap: 30px;
+		}
 	}
 
 	&__subscribe {
@@ -110,11 +188,16 @@
 		align-items: center;
 		justify-content: center;
 		border-top: 5px solid var(--ground);
+		font-size: 18px;
+		
+		@include media('<=xxs') {
+			height: 100px;
+			font-size: 20px;
+		}
 
 		a {
 			color: inherit;
 			text-decoration: none;
-			font-size: 18px;
 		}
 	}
 }

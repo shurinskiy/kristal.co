@@ -3,6 +3,10 @@
 .contact {
 	$self: &;
 	margin-bottom: 135px;
+	
+	@include media('<=xxs') {
+		margin-bottom: 100px;
+	}
 
 	&__title {
 		display: flex;
@@ -46,7 +50,7 @@
 		}
 		
 		@include media('<=xxs') {
-			gap: 32px;
+			gap: 65px;
 		}
 	}
 
@@ -134,5 +138,12 @@
 		background-color: var(--dark);
 		border-radius: 10px;
 		flex-grow: 1;
+
+		@include media('<=xxs') {
+			background-color: transparent;
+			width: 100%;
+			max-width: 330px;
+			margin: 0 auto;
+		}
 	}
 }

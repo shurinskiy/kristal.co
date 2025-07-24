@@ -13,13 +13,20 @@ import { driveMenu } from "../../js/libs/driveMenu";
 		open: function() {
 			toggle.classList.add('opened');
 
-			this.querySelectorAll('a.menu__link[href*="#"]').forEach(link => {
-				link.addEventListener('click', (e) => menu.menuClose(e));
-			});
+			if (matchMedia('(max-width: 480px)').matches) {
+				document.documentElement.style.setProperty('overflow', 'hidden');
+				document.body.style.setProperty('padding-right', 'var(--sw, 0px)');
+			}
 		},
 		close: function() {
 			toggle.classList.remove('opened');
+			document.documentElement.style.removeProperty('overflow');
+			document.body.style.removeProperty('padding-right');
 		}
+	});
+
+	body.querySelectorAll('a.menu__link[href*="#"]').forEach(link => {
+		link.addEventListener('click', (e) => menu.menuClose(e));
 	});
 
 })();

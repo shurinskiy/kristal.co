@@ -63,33 +63,47 @@
 	&__body {
 		display: none;
 		flex-flow: column nowrap;
-		align-items: center;
 		position: fixed;
 		z-index: 10;
 		top: var(--top);
 		left: var(--left);
-		// box-shadow: 0 0 10px rgba(var(--dark-rgb), 0.8);
 		background-color: rgba(26, 26, 26, 0.8);
 		border-radius: 23px 23px 8px 8px;
 		backdrop-filter: blur(8px);
-		padding: 24px 24px 64px;
+		padding: 30px 30px 60px;
 		animation: fadeIn 0.4s;
-		color: var(--bright);
 		width: min(var(--container), calc(100% - var(--gap) * 2));
 		max-width: 580px;
 		height: 720px;
-		font-size: 22px;
-		font-weight: 500;
 		
 		@include media('<=xxs') {
 			left: 0;
 			top: 0;
 			width: 100%;
-			height: 100vh;
+			height: calc(var(--vh, 1dvh) * 100);
 			border-radius: 0;
-			overflow-y: auto;
-			padding: 90px 24px 30px;
+			padding: 20px 0 20px 20px;
 			justify-content: space-between;
+		}
+		
+		&.opened {
+			display: flex;
+		}
+	}
+
+	&__content {
+		font-size: 22px;
+		font-weight: 500;
+		color: var(--bright);
+		display: flex;
+		align-items: center;
+		flex-flow: column nowrap;
+		overflow-y: auto;
+		height: 100%;
+		
+		@include media('<=xxs') {
+			padding: 65px 20px 0 0;
+			gap: 50px;
 		}
 
 		&::-webkit-scrollbar {
@@ -108,10 +122,6 @@
 		
 		&::-webkit-scrollbar-corner {
 			background-color: transparent;
-		}		
-
-		&.opened {
-			display: flex;
 		}
 	}
 
@@ -138,10 +148,19 @@
 	&__logo {
 		max-width: 110px;
 		margin-bottom: 15px;
+		
+		@include media('<=xxs') {
+			max-width: 120px;
+			margin-bottom: 5px;
+		}
 	}
 
 	&__links {
 		margin-bottom: 30px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__link {
@@ -152,6 +171,10 @@
 		transition: color 0.3s;
 		color: inherit;
 		padding: 13px 0;
+		
+		@include media('<=xxs') {
+			padding: 16px 0;
+		}
 
 		&:hover {
 			color: var(--red);
@@ -160,6 +183,10 @@
 
 	&__contact {
 		margin-bottom: 40px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 
 		span, a {
 			display: block;

@@ -3,6 +3,11 @@
 .form {
 	$self: &;
 	padding: 35px;
+	
+	@include media('<=xxs') {
+		padding: 0;
+		
+	}
 
 	&__title {
 		text-align: center;
@@ -10,6 +15,14 @@
 		
 		@include media('<=xxs') {
 			margin-bottom: 32px;
+		}
+
+		br {
+			display: none;
+		
+			@include media('<=xxs') {
+				display: block;
+			}
 		}
 	}
 
@@ -20,8 +33,9 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px 27px;
-
+		
 		@include media('<=md') {
+			margin: 0 auto 40px;
 			max-width: none;
 		}
 	}
@@ -70,10 +84,18 @@
 			font-size: 20px;
 			padding: 10px;
 			width: 100%;
+			
+			@include media('<=xxs') {
+				min-height: 62px;
+			}
 		}
 
 		textarea {
 			min-height: 150px;
+			
+			@include media('<=xxs') {
+				min-height: 135px;
+			}
 		}
 
 		&.error input, &.error textarea {
@@ -82,7 +104,13 @@
 		}
 	}
 
-	&__submit {
+	&__submit.button {
 		margin: 0 auto;
+
+		@include media('<=xxs') {
+			background: 
+				linear-gradient(var(--ground), var(--ground)) padding-box,
+				linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		}
 	}
 }

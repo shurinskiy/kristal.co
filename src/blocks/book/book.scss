@@ -9,6 +9,16 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 24px;
+	
+	@include media('<=md') {
+		flex-flow: column nowrap;
+		padding: 55px 30px;
+	}
+	
+	@include media('<=xxs') {
+		padding: 35px 12px 55px;
+		max-width: 330px;
+	}
 
 	&__title {
 		text-align: center;
