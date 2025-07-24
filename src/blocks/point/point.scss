@@ -54,10 +54,11 @@
 		grid-template-columns: 2fr 3fr 2fr;
 		justify-items: center;
 		align-items: center;
-		grid-gap: 20px 30px;
+		grid-gap: 28px 30px;
 
 		@include media('<=sm') {
-			display: block;
+			display: flex;
+			flex-flow: column nowrap;
 		}
 	}
 
@@ -78,7 +79,6 @@
 		line-height: 1.37;
 		
 		@include media('<=sm') {
-			margin-bottom: 28px;
 			font-size: 18px;
 		}
 		
@@ -90,6 +90,6 @@
 	}
 
 	&__button {
-		margin: 0 auto;
+
 	}
 }
