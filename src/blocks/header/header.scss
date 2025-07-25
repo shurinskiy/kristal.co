@@ -10,6 +10,19 @@
 	@include media('<=md') {
 		background-color: transparent;
 	}
+
+	&_he {
+		#{$self}__main {
+			font-family: "VR", sans-serif;
+		}
+		
+		#{$self}__contact {
+			
+			span {
+				font-family: "VR", sans-serif;
+			}
+		}
+	}
 	
 	&::before {
 		display: block;
