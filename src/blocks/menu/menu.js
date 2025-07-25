@@ -13,7 +13,7 @@ import { driveMenu } from "../../js/libs/driveMenu";
 		open: function() {
 			toggle.classList.add('opened');
 
-			if (matchMedia('(max-width: 480px)').matches) {
+			if (matchMedia('(max-width: 780px)').matches) {
 				document.documentElement.style.setProperty('overflow', 'hidden');
 				document.body.style.setProperty('padding-right', 'var(--sw, 0px)');
 			}
@@ -29,4 +29,6 @@ import { driveMenu } from "../../js/libs/driveMenu";
 		link.addEventListener('click', (e) => menu.menuClose(e));
 	});
 
+	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
+	
 })();

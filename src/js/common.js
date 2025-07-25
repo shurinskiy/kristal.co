@@ -1,5 +1,6 @@
 import { throttle } from "./libs/utils";
 import { driveAdaptive } from "./libs/driveAdaptive.js";
+import "../../node_modules/swiped-events/dist/swiped-events.min.js";
 import "./polyfills.js";
 import "./blocks.js";
 

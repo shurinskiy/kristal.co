@@ -5,6 +5,10 @@
 	display: flex;
 	gap: 24px;
 
+	@at-root html[lang="he"] #{&} {
+		direction: rtl;
+	}
+
 	&__link {
 		text-decoration: none;
 		color: inherit;

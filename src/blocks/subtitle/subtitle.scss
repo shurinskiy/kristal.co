@@ -9,4 +9,9 @@
 	font-size: fluid(40px, 25px, xlg, xxs);
 	font-family: "SC", sans-serif;
 	-webkit-text-fill-color: var(--bright);
+	
+	@at-root html[lang="he"] #{&} {
+		font-family: "SO", sans-serif;
+		font-size: fluid(40px, 30px, xlg, xxs);
+	}	
 }

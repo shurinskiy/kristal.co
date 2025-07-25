@@ -8,8 +8,8 @@
 		margin-bottom: 24px;
 	}
 
-	&_he {
-		
+	@at-root html[lang="he"] #{&} {
+		direction: rtl;
 	}
 
 	&__title {

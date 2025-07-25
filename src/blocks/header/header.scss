@@ -10,19 +10,6 @@
 	@include media('<=md') {
 		background-color: transparent;
 	}
-
-	&_he {
-		#{$self}__main {
-			font-family: "VR", sans-serif;
-		}
-		
-		#{$self}__contact {
-			
-			span {
-				font-family: "VR", sans-serif;
-			}
-		}
-	}
 	
 	&::before {
 		display: block;
@@ -64,6 +51,8 @@
 		max-width: 500px;
 		height: 45px;
 		gap: 30px;
+		font-weight: 500;
+		font-size: fluid(19px, 16px, xlg, md);
 		
 		@include media('<=lg') {
 			height: 40px;
@@ -72,10 +61,10 @@
 		@include media('<=md') {
 			display: none;
 		}
-	}
-
-	&__toggle {
-		@extend %reset-button;
+		
+		@at-root html[lang="he"] #{&} {
+			font-size: fluid(21px, 18px, xlg, md);
+		}	
 	}
 
 	&__links {
@@ -94,8 +83,6 @@
 	&__link {
 		color: var(--bright);
 		text-decoration: none;
-		font-weight: 500;
-		font-size: fluid(19px, 16px, xlg, md);
 	}
 
 	&__logo {
@@ -136,6 +123,10 @@
 			text-transform: uppercase;
 			font-weight: 600;
 			font-size: fluid(18px, 15px, xlg, md);
+		
+			@at-root html[lang="he"] #{&} {
+				font-size: fluid(20px, 17px, xlg, md);
+			}	
 		}
 		
 		a {

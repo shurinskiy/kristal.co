@@ -9,6 +9,11 @@
 	text-transform: uppercase;
 	font-family: "SC", sans-serif;
 	
+	@at-root html[lang="he"] #{&} {
+		font-family: "SO", sans-serif;
+		font-size: fluid(64px, 40px, xlg, xxs);
+	}	
+	
 	&_white {
 		background: none;		
 		-webkit-text-fill-color: inherit;

@@ -6,7 +6,7 @@
 	display: flex;
 	width: fit-content;
 	align-items: center;
-	padding: 3px 24px 3px 4px;
+	@include padding(3, 24, 3, 4);
 	gap: 24px;
 	border-radius: 1000px;
 	border: 3px solid var(--crimson);
@@ -21,12 +21,18 @@
 	font-weight: 600;
 	font-size: 20px;
 	cursor: pointer;
+	direction: ltr;
 	
+	@at-root html[lang="he"] #{&} {
+		font-family: "VR", sans-serif;
+		font-weight: 400;
+	}	
+
 	@include media('<=xxlg') {
 		height: 62px;
 		font-size: 18px;
 		border-width: 2px;
-		padding: 3px 24px 3px 3px;
+		@include padding(3, 24, 3, 3);
 	}
 	
 	@include media('<=xxs') {
@@ -34,7 +40,7 @@
 	}
 	
 	@include media('<=xxxs') {
-		padding: 3px 16px 3px 3px;
+		@include padding(3, 16, 3, 3);
 		gap: 16px;
 	}
 

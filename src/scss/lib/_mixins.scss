@@ -149,3 +149,11 @@
 		#{$property}: $targetValue;
 	}
 }
+
+// отступы адаптирующиеся под разное направление текста (rtl-ltr)
+@mixin padding($top, $end, $bottom, $start) {
+	padding-block-start: unitless($top);
+	padding-block-end: unitless($bottom);
+	padding-inline-start: unitless($start);
+	padding-inline-end: unitless($end);
+}

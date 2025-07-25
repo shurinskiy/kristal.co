@@ -8,8 +8,8 @@
 		margin-bottom: 70px;
 	}
 
-	&_he {
-		
+	@at-root html[lang="he"] #{&} {
+		direction: rtl;
 	}
 
 	&__inner {
@@ -106,9 +106,9 @@
 	&__text {
 		text-align: center;
 
-		span {
+		span.title {
 			padding-top: 20px;
-			display: inline-block;
+			display: inline;
 		}
 	}
 

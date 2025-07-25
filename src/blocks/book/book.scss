@@ -20,8 +20,8 @@
 		max-width: 330px;
 	}
 
-	&_he {
-		
+	@at-root html[lang="he"] #{&} {
+		direction: rtl;
 	}
 
 	&__title {

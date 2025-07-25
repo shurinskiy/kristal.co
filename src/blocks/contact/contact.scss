@@ -8,10 +8,6 @@
 		margin-bottom: 100px;
 	}
 
-	&_he {
-		
-	}
-
 	&__title {
 		display: flex;
 		align-items: center;
@@ -55,6 +51,10 @@
 		
 		@include media('<=xxs') {
 			gap: 65px;
+		}
+
+		@at-root html[lang="he"] #{&} {
+			direction: rtl;
 		}
 	}
 

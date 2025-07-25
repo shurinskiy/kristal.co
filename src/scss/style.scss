@@ -45,12 +45,19 @@
 @include font-face("LTSuperior-Bold", "LS", 700);
 @include font-face("Sclate-Regular", "SC", 400);
 
+html {
+	font-family: "LS", sans-serif;
+	
+	&[lang="he"] {
+		font-family: "VR", sans-serif;
+	}
+}
+
 body, html {
 	// scrollbar-gutter: stable;
 	scroll-behavior: smooth;
 	scroll-padding-top: 50px;
 	background-color: var(--ground);
-	font-family: "LS", sans-serif;
 	font-size: var(--size);
 	color: var(--bright);
 	min-height: 100vh;

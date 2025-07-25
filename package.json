@@ -70,6 +70,7 @@
 	},
 	"dependencies": {
 		"enquire.js": "^2.1.6",
+		"swiped-events": "^1.2.0",
 		"swiper": "^11.2.10"
 	}
 }

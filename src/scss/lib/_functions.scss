@@ -17,6 +17,14 @@
 	}
 }
 
+@function unitless($value) {
+	@if meta.type-of($value) == 'number' and math.is-unitless($value) {
+		@return $value * 1px;
+	}
+	@return $value;
+}
+
+
 // Замена подстроки в строке
 @function str-replace($string, $search, $replace: '') {
 	$index: string.index($string, $search);

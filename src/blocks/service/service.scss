@@ -4,8 +4,8 @@
 	$self: &;
 	margin-bottom: 30px;
 
-	&_he {
-		
+	@at-root html[lang="he"] #{&} {
+		direction: rtl;
 	}
 	
 	&__title {
@@ -34,6 +34,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 15px;
 		line-height: 0.9;
 		gap: 26px;
 		
@@ -57,6 +58,10 @@
 		
 		span {
 			padding-top: 16px;
+			
+			@at-root html[lang="he"] #{&} {
+				padding: 0;
+			}	
 		}
 	}
 

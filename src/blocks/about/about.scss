@@ -8,10 +8,6 @@
 		margin-bottom: 115px;
 	}
 
-	&_he {
-		
-	}
-
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -21,10 +17,14 @@
 		@include media('<=sm') {
 			display: block;
 		}
+
+		@at-root html[lang="he"] #{&} {
+			direction: rtl;
+		}	
 	}
 
 	&__image {
-		padding: 0 43px 90px 0;
+		@include padding(0, 43, 90, 0);
 		position: relative;
 		margin: 0 auto;
 		
@@ -34,7 +34,7 @@
 		}
 		
 		@include media('<=xs') {
-			padding: 0 0 57px;
+			@include padding(0, 0, 57, 0);
 		}
 		
 		@include media('<=xxs') {
@@ -66,18 +66,33 @@
 		background: 
 			linear-gradient(var(--dark), var(--dark)) padding-box,
 			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
-
+			
 		@include media('<=xs') {
-			right: 50%;
 			translate: 50% 0;
+			right: 50%;
+			left: auto;
 		}
 		
 		@include media('<=xxs') {
 			max-width: calc(100% - 60px);
 		}
 
-		strong {
+		@at-root html[lang="he"] #{&} {
+			right: auto;
+			left: 0;
+			
+			@include media('<=xs') {
+				translate: -50% 0;
+				left: 50%;
+			}
+		}	
+
+		strong.title {
 			line-height: 1.0;
+			
+			@at-root html[lang="he"] #{&} {
+				font-size: fluid(56px, 35px, xlg, xxs);
+			}	
 		}
 
 		span {
@@ -90,6 +105,10 @@
 			@include media('<=xxs') {
 				font-size: 15px;
 			}
+			
+			@at-root html[lang="he"] #{&} {
+				font-weight: 400;
+			}	
 		}
 	}
 
@@ -108,6 +127,10 @@
 		
 		@include media('<=xxs') {
 			margin-bottom: 12px;
+		}
+
+		@at-root html[lang="he"] #{&} {
+			margin-bottom: 30px;
 		}
 	}
 
