@@ -86,12 +86,14 @@
 				left: 50%;
 			}
 		}	
-
+		
 		strong.title {
 			line-height: 1.0;
+			text-align: center;
 			
 			@at-root html[lang="he"] #{&} {
 				font-size: fluid(56px, 35px, xlg, xxs);
+				line-height: 1.2;
 			}	
 		}
 
@@ -208,10 +210,6 @@
 	}
 
 	&__button {
-		margin: 0 auto 48px;
-		
-		@include media('<=xxs') {
-			margin: 0 auto 55px;
-		}
+		margin: 0 auto 55px;
 	}
 }
