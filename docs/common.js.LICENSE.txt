@@ -6,3 +6,5 @@
  * @author John Doherty <www.johndoherty.info>
  * @license MIT
  */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */

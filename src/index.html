@@ -321,8 +321,16 @@
 			</div>
 		</div>
 		<form class="contact__form form" action="./">
+			<div class="form__success">
+				<h2 class="subtitle gold">תודה רבה!</h2>
+				<p>ניצור איתכם קשר בהקדם האפשרי</p>
+			</div>
 			<h3 class="form__title subtitle">השאירו פרטים ונחזור אליכם</h3>
 			<fieldset class="form__fields">
+				<label class="form__field">
+					<span>צֶבַע</span>
+					<input type="text" name="color">
+				</label>
 				<label class="form__field form__field_required">
 					<span>שם</span>
 					<input type="text" name="name">
@@ -339,6 +347,7 @@
 					<span>הודעה</span>
 					<textarea name="msg"></textarea>
 				</label>
+				<div class="form__alerts"></div>
 			</fieldset>
 			<button class="form__submit button button_dark button_spin">
 				<strong>

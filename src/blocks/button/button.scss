@@ -62,8 +62,8 @@
 		}
 
 		img {
-			width: 60%;
-			height: 60%;
+			width: 80%;
+			height: 80%;
 			display: none;
 		}
 	}
@@ -118,11 +118,5 @@
 		}
 
 		span { color: var(--bright); }
-	}
-
-	&_pending strong {
-		svg { display: none; }
-
-		img { display: block; }
 	}
 }

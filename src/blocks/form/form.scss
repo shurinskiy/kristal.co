@@ -3,9 +3,51 @@
 .form {
 	$self: &;
 	padding: 35px;
+	position: relative;
+	overflow: hidden;
 	
 	@include media('<=xxs') {
 		padding: 0;
+	}
+
+	&.success {
+
+		@include media('<=xs') {
+			min-height: 400px;
+
+			#{$self}__fields {
+				display: none;
+			}
+		}
+
+		#{$self}__success {
+			display: flex;
+		}
+	}
+	
+	&__success {
+		display: none;
+		position: absolute;
+		inset: 0;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--dark);
+		animation: fadeIn 0.3s;
+
+		@include media('<=xxs') {
+			background-color: var(--ground);
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: fluid(36px, 30px);
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: fluid(20px, 16px);
+		}
 	}
 
 	&__title {
@@ -44,6 +86,10 @@
 		grid-column: span 2;
 		flex-flow: column nowrap;
 		gap: 4px;
+
+		&:first-child {
+			@include hide();
+		}
 
 		&_required span::after {
 			content: '*';
@@ -103,6 +149,15 @@
 		}
 	}
 
+	&__alerts {
+		color: var(--red);
+		font-size: 14px;
+
+		span {
+			display: block;
+		}
+	}
+
 	&__submit.button {
 		margin: 0 auto;
 
@@ -110,6 +165,12 @@
 			background: 
 				linear-gradient(var(--ground), var(--ground)) padding-box,
 				linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
+		}
+		
+		&:disabled strong {
+			svg { display: none; }
+
+			img { display: block; }
 		}
 	}
 }

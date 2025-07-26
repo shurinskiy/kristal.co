@@ -1,7 +1,7 @@
 @@include("_head.html", {"lang":"ru"}) 
 @@include("_header-ru.html") 
 
-<section class="hero hero_he">
+<section class="hero">
 	<div class="hero__slider swiper">
 		<div class="swiper-wrapper">
 			<div class="hero__slide swiper-slide">
@@ -310,8 +310,16 @@
 			</div>
 		</div>
 		<form class="contact__form form" action="./">
+			<div class="form__success">
+				<h2 class="subtitle gold">Большое спасибо!</h2>
+				<p>Мы свяжемся с вами как можно скорее.</p>
+			</div>
 			<h3 class="form__title subtitle">Форма<br/> обратной связи</h3>
 			<fieldset class="form__fields">
+				<label class="form__field">
+					<span>Цвет</span>
+					<input type="text" name="color">
+				</label>
 				<label class="form__field form__field_required">
 					<span>Имя</span>
 					<input type="text" name="name">
@@ -328,6 +336,7 @@
 					<span>Сообщение</span>
 					<textarea name="msg"></textarea>
 				</label>
+				<div class="form__alerts"></div>
 			</fieldset>
 			<button class="form__submit button button_dark button_spin">
 				<strong>
