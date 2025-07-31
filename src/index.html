@@ -1,21 +1,18 @@
-@@include("_head.html", {"lang":"he"}) 
+@@include("_head-he.html") 
 @@include("_header-he.html") 
 
 <section class="hero">
 	<div class="hero__slider swiper" dir="rtl">
 		<div class="swiper-wrapper">
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#offer">
 				<img src="./images/hero-slide-3.webp" alt="">
-				<div class="hero__text title gold">
-					הצעה בלעדית<br/><span class="subtitle">תיקון שקעים לרכב</span> בחינם
-					
-				</div>
+				<div class="hero__text title gold">הצעה בלעדית<br/><span class="subtitle">תיקון שקעים לרכב</span> בחינם</div>
 			</div>
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#paint">
 				<img src="./images/hero-slide-1.webp" alt="">
 				<div class="hero__text title title_white">תיקון צבע נקודתי לרכב</div>
 			</div>
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#film">
 				<img src="./images/hero-slide-2.webp" alt="">
 				<div class="hero__text title title_white">הדבקת ציפוי מגן PPF</div>
 			</div>
@@ -26,7 +23,7 @@
 		<button class="hero__button hero__button_prev">
 			<svg><use xlink:href="#prev"></use></svg>
 		</button>
-		<a class="hero__more button button_spin button_hero" href="./">
+		<a class="hero__more button button_spin button_hero" href="#offer">
 			<strong><svg><use xlink:href="#arr"></use></svg></strong>
 			<span>לפרטים נוספים</span>
 		</a>
@@ -41,7 +38,7 @@
 		<div class="about__image">
 			<img src="./images/about-image.webp" alt="">
 			<div class="about__badge">
-				<strong class="title gold">מעל 20 שנות</strong>
+				<strong class="title gold">מעל 20 שנים</strong>
 				<span>ניסיון במוסך מקצועי</span>
 			</div>
 		</div>
@@ -63,7 +60,7 @@
 					<span>צביעה מקומית</span>
 				</div>
 			</div>
-			<a class="about__button button" href="./">
+			<a class="about__button button" href="tel:+972533907950">
 				<strong><svg><use xlink:href="#ring"></use></svg></strong>
 				<span>צרו קשר עכשיו</span>
 			</a>
@@ -98,7 +95,7 @@
 				<div class="point__bottom">
 					<div class="point__text">זו טכנולוגיה לשיקום הרכב מבלי לפגוע בצבע המקורי של היצרן. השיטה מאפשרת להסיר שקעים קטנים ובינוניים שנגרמו מברד, מכות מדלתות, תאונות קלות או פגיעות מכניות אחרות. הטכנאי משתמש בכלים מיוחדים כדי ליישר בעדינות את המתכת מבפנים או מבחוץ, ולהחזיר לחלקים את צורתם המקורית. השירות מהיר, נגיש ומשמר את צבע הרכב המקורי.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>להזמין</span>
 						</a>
@@ -106,7 +103,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="service__part">
+		<div class="service__part" id="paint">
 			<h3 class="service__subtitle subtitle">
 				<svg><use xlink:href="#spray"></use></svg>
 				<span>תיקון צבע נקודתי לרכב</span>
@@ -128,7 +125,7 @@
 				<div class="point__bottom">
 					<div class="point__text">זהו שיקום של אזור פגוע ברכב מבלי לצבוע את כל החלק. ההליך מתאים לשריטות קלות, שפשופים או סדקים קטנים. האזור הנפגע מנוקה, מוחלק, נצבע בדיוק בצבע הרכב ומלוטש. שיטה זו חוסכת זמן ושומרת על הציפוי המקורי של הרכב.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>להזמין</span>
 						</a>
@@ -136,7 +133,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="service__part">
+		<div class="service__part" id="film">
 			<h3 class="service__subtitle subtitle">
 				<svg><use xlink:href="#paints"></use></svg>
 				<span>הדבקת ציפוי מגן PPF</span>
@@ -158,7 +155,7 @@
 				<div class="point__bottom">
 					<div class="point__text">זהו ציפוי של מדבקת פוליאוריתן שקופה על חלקי הרכב, להגנה מפני שריטות, שפשופים, חומרים כימיים וקרני שמש אולטרה סגולות. המדבקה שומרת על המראה החיצוני של הרכב, עמידה בפני נזקים ומתחדשת בחימום. השירות מתאים גם לרכבים חדשים וגם לרכבים לאחר פוליש או תיקון מקומי.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>להזמין</span>
 						</a>
@@ -172,20 +169,7 @@
 <section class="join">
 	<div class="join__inner container">
 		<h2 class="join__title subtitle">הצטרפו אלינו ברשתות החברתיות</h2>
-		<div class="join__social social">
-			<a class="social__link" href="./">
-				<img src="./images/social-fboo.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-inst.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-ttok.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-yout.svg" alt="">
-			</a>
-		</div>
+		@@include("_social.html", { cls: "join__social"})
 	</div>
 </section>
 
@@ -198,9 +182,8 @@
 				<span class="subtitle">תיקון שקעים</span>
 				<span class="title gold">בחינם</span>
 			</div>
-			<div class="offer__reason subtitle">ללא פנייה
- לחברת הביטוח</div>
-			<a class="offer__button button" href="./">
+			<div class="offer__reason subtitle">ללא פנייה לחברת הביטוח</div>
+			<a class="offer__button button" href="http://wa.me/972533907950" target="_blank">
 				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
 				<span>לקבלת ייעוץ</span>
 			</a>
@@ -233,9 +216,8 @@
 			</div>
 		</div>
 		<div class="subscribe__side">
-			<!-- <div class="subscribe__text subtitle">מנוי שנתי<br/> בלבד במחיר של <span class="title gold">1500 ₪</span></div> -->
-			<div class="subscribe__text subtitle">מנוי שנתי<br/> במחיר של <span class="title gold">1500 ₪</span> בלבד</div>
-			<a class="subscribe__button button button_dark" href="./">
+			<div class="subscribe__text subtitle">מנוי שנתי במחיר<br/> של <span class="title gold">1500 ₪</span><br/> בלבד</div>
+			<a class="subscribe__button button button_dark" href="http://wa.me/972533907950" target="_blank">
 				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
 				<span>הצטרפו למנוי</span>
 			</a>
@@ -267,7 +249,7 @@
 בלי חיובים נסתרים</h3>
 		</div>
 		<div class="profit__call">
-			<a class="profit__pin pin" href="./">
+			<a class="profit__pin pin" href="tel:+972533907950">
 				<svg><use xlink:href="#ring"></use></svg>
 			</a>
 		</div>
@@ -276,11 +258,11 @@
 
 <section class="contact" id="contact">
 	<h2 class="contact__title container">
-		<a class="contact__pin pin" href="./">
+		<a class="contact__pin pin" href="tel:+972533907950">
 			<svg><use xlink:href="#ring"></use></svg>
 		</a>
 		<span class="subtitle gold">!צור קשר כבר היום</span>
-		<a class="contact__pin pin" href="./">
+		<a class="contact__pin pin" href="http://wa.me/972533907950" target="_blank">
 			<svg><use xlink:href="#wapp"></use></svg>
 		</a>
 	</h2>
@@ -290,7 +272,7 @@
 			<div class="contact__points">
 				<div class="contact__point">
 					<svg><use xlink:href="#geo"></use></svg>
-					<a href="./">התעשייה 21, רעננה</a>
+					<a href="https://maps.app.goo.gl/dXvu1Ud6vd6TvaVUA">התעשייה, רעננה</a>
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#ring"></use></svg>
@@ -298,27 +280,14 @@
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#dog"></use></svg>
-					<a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
+					<a href="mailto:pdrservice.co.il@gmail.com">pdrservice.co.il@gmail.com</a>
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#time"></use></svg>
 					<span>ימים א'–ה':<br/>9:00–17:00</span>
 				</div>
 			</div>
-			<div class="contact__social social">
-				<a class="social__link" href="./">
-					<img src="./images/social-fboo.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-inst.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-ttok.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-yout.svg" alt="">
-				</a>
-			</div>
+			@@include("_social.html", { cls: "contact__social"})
 		</div>
 		<form class="contact__form form" action="./">
 			<div class="form__success">
@@ -329,23 +298,23 @@
 			<fieldset class="form__fields">
 				<label class="form__field">
 					<span>צֶבַע</span>
-					<input type="text" name="color">
+					<input type="text" name="kristal_color">
 				</label>
 				<label class="form__field form__field_required">
 					<span>שם</span>
-					<input type="text" name="name">
+					<input type="text" name="kristal_name">
 				</label>
 				<label class="form__field form__field_required form__field_half">
 					<span>טלפון</span>
-					<input type="text" name="phone">
+					<input type="text" name="kristal_phone">
 				</label>
 				<label class="form__field form__field_half">
 					<span>Email</span>
-					<input type="text" name="mail">
+					<input type="text" name="kristal_mail">
 				</label>
 				<label class="form__field form__field_required">
 					<span>הודעה</span>
-					<textarea name="msg"></textarea>
+					<textarea name="kristal_msg"></textarea>
 				</label>
 				<div class="form__alerts"></div>
 			</fieldset>

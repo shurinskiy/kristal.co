@@ -85,7 +85,7 @@
 		background: 
 			linear-gradient(var(--dark), var(--dark)) padding-box,
 			linear-gradient(90deg, #926105, #DFA02B, #91620B) border-box;
-		padding: 30px 30px 35px;
+		padding: 30px 20px 35px;
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
@@ -98,7 +98,7 @@
 		}
 		
 		@include media('<=xxs') {
-			padding: 30px 30px 42px;
+			padding: 30px 20px 42px;
 			gap: 20px;
 		}
 	}
@@ -107,6 +107,7 @@
 		text-align: center;
 
 		span.title {
+			white-space: nowrap;
 			padding-top: 20px;
 			display: inline;
 		}

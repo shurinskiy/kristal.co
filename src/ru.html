@@ -1,18 +1,18 @@
-@@include("_head.html", {"lang":"ru"}) 
+@@include("_head-ru.html")
 @@include("_header-ru.html") 
 
 <section class="hero">
 	<div class="hero__slider swiper">
 		<div class="swiper-wrapper">
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#offer">
 				<img src="./images/hero-slide-3.webp" alt="">
 				<div class="hero__text title gold">Эксклюзивное предложение<br/> <span class="subtitle">удаление вмятин</span> бесплатно</div>
 			</div>
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#paint">
 				<img src="./images/hero-slide-1.webp" alt="">
 				<div class="hero__text title title_white">Локальная покраска<br/> автомобиля</div>
 			</div>
-			<div class="hero__slide swiper-slide">
+			<div class="hero__slide swiper-slide" data-anchor="#film">
 				<img src="./images/hero-slide-2.webp" alt="">
 				<div class="hero__text title title_white">Поклейка защитной<br/> плёнки PPF</div>
 			</div>
@@ -23,7 +23,7 @@
 		<button class="hero__button hero__button_prev">
 			<svg><use xlink:href="#prev"></use></svg>
 		</button>
-		<a class="hero__more button button_spin button_hero" href="./">
+		<a class="hero__more button button_spin button_hero" href="#offer">
 			<strong><svg><use xlink:href="#arr"></use></svg></strong>
 			<span>Узнать больше</span>
 		</a>
@@ -60,11 +60,11 @@
 					<span>Локальная покраска</span>
 				</div>
 			</div>
-			<a class="about__button button" href="./">
+			<a class="about__button button" href="tel:+972533907950">
 				<strong><svg><use xlink:href="#ring"></use></svg></strong>
 				<span>Связаться сейчас</span>
 			</a>
-			<div class="about__text">Мы используем профессиональные технологии и материалы, а наши мастера — опытные специалисты, которые выполняют все работы аккуратно, быстро и с вниманием к деталям. Компания «Кристалл» — ваш надёжный выбор для восстановления и защиты кузова.</div>
+			<div class="about__text">Мы используем профессиональные технологии и материалы, а наши мастера — опытные специалисты, которые выполняют все работы аккуратно, быстро и с вниманием к деталям. Компания «Кристал» — ваш надёжный выбор для восстановления и защиты кузова.</div>
 		</div>
 	</div>
 </section>
@@ -94,7 +94,7 @@
 				<div class="point__bottom">
 					<div class="point__text"> — это технология восстановления кузова без повреждения заводского лакокрасочного покрытия. Метод позволяет устранить мелкие и средние вмятины, возникшие от града, ударов дверьми, незначительных ДТП и других механических воздействий. Специалист с помощью специальных инструментов аккуратно выправляет металл изнутри или снаружи, возвращая детали первоначальную форму. Услуга быстрый, доступная и сохраняет оригинальную окраску автомобиля.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>Заказать</span>
 						</a>
@@ -102,7 +102,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="service__part">
+		<div class="service__part" id="paint">
 			<h3 class="service__subtitle subtitle">
 				<svg><use xlink:href="#spray"></use></svg>
 				<span>Локальная покраска автомобиля</span>
@@ -124,7 +124,7 @@
 				<div class="point__bottom">
 					<div class="point__text"> — это восстановление повреждённого участка кузова без полной окраски детали. Процедура применяется при незначительных царапинах, сколах или потертостях. Повреждённое место зачищается, грунтуется, выравнивается и окрашивается в точный цвет авто с последующей полировкой. Такой метод экономит время , сохраняя оригинальное покрытие машины.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>Заказать</span>
 						</a>
@@ -132,7 +132,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="service__part">
+		<div class="service__part" id="film">
 			<h3 class="service__subtitle subtitle">
 				<svg><use xlink:href="#paints"></use></svg>
 				<span>Поклейка защитной плёнки PPF</span>
@@ -154,7 +154,7 @@
 				<div class="point__bottom">
 					<div class="point__text"> — это нанесение прозрачной полиуретановой плёнки на элементы кузова для защиты от царапин, сколов, реагентов и ультрафиолета. Плёнка сохраняет внешний вид автомобиля, устойчива к повреждениям и самовосстанавливается при нагреве. Услуга подходит как для новых авто, так и для машин после полировки или локального ремонта.</div>
 					<div class="point__button">
-						<a class="button" href="./">
+						<a class="button" href="tel:+972533907950">
 							<strong><svg><use xlink:href="#ring"></use></svg></strong>
 							<span>Заказать</span>
 						</a>
@@ -168,20 +168,7 @@
 <section class="join">
 	<div class="join__inner container">
 		<h2 class="join__title subtitle">Присоединяйтесь к нам в соцсетях!</h2>
-		<div class="join__social social">
-			<a class="social__link" href="./">
-				<img src="./images/social-fboo.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-inst.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-ttok.svg" alt="">
-			</a>
-			<a class="social__link" href="./">
-				<img src="./images/social-yout.svg" alt="">
-			</a>
-		</div>
+		@@include("_social.html", { cls: "join__social"})
 	</div>
 </section>
 
@@ -195,7 +182,7 @@
 				<span class="title gold">Бесплатно</span>
 			</div>
 			<div class="offer__reason subtitle">Никаких обращений<br/> в страховую компанию</div>
-			<a class="offer__button button" href="./">
+			<a class="offer__button button" href="http://wa.me/972533907950" target="_blank">
 				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
 				<span>Получить консультацию</span>
 			</a>
@@ -228,7 +215,7 @@
 		</div>
 		<div class="subscribe__side">
 			<div class="subscribe__text subtitle">Подписка всего<br/> за <span class="title gold">1500 ₪</span><br/> в год</div>
-			<a class="subscribe__button button button_dark" href="./">
+			<a class="subscribe__button button button_dark" href="http://wa.me/972533907950" target="_blank">
 				<strong><svg><use xlink:href="#wapp"></use></svg></strong>
 				<span>Заказать подписку</span>
 			</a>
@@ -256,7 +243,7 @@
 			<h3 class="profit__subtitle">Прозрачные условия — ни каких<br/> скрытых платежей</h3>
 		</div>
 		<div class="profit__call">
-			<a class="profit__pin pin" href="./">
+			<a class="profit__pin pin" href="tel:+972533907950">
 				<svg><use xlink:href="#ring"></use></svg>
 			</a>
 		</div>
@@ -265,11 +252,11 @@
 
 <section class="contact" id="contact">
 	<h2 class="contact__title container">
-		<a class="contact__pin pin" href="./">
+		<a class="contact__pin pin" href="tel:+972533907950">
 			<svg><use xlink:href="#ring"></use></svg>
 		</a>
 		<span class="subtitle gold">Обратись уже сегодня!</span>
-		<a class="contact__pin pin" href="./">
+		<a class="contact__pin pin" href="http://wa.me/972533907950" target="_blank">
 			<svg><use xlink:href="#wapp"></use></svg>
 		</a>
 	</h2>
@@ -279,7 +266,7 @@
 			<div class="contact__points">
 				<div class="contact__point">
 					<svg><use xlink:href="#geo"></use></svg>
-					<a href="./">Раанана, ул. Хатаиса, 21.</a>
+					<a href="https://maps.app.goo.gl/dXvu1Ud6vd6TvaVUA">HaTa'asiya St, Ra'anana</a>
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#ring"></use></svg>
@@ -287,27 +274,14 @@
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#dog"></use></svg>
-					<a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
+					<a href="mailto:pdrservice.co.il@gmail.com">pdrservice.co.il@gmail.com</a>
 				</div>
 				<div class="contact__point">
 					<svg><use xlink:href="#time"></use></svg>
 					<span>Воскресенье – Четверг:<br/> 9:00–17:00</span>
 				</div>
 			</div>
-			<div class="contact__social social">
-				<a class="social__link" href="./">
-					<img src="./images/social-fboo.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-inst.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-ttok.svg" alt="">
-				</a>
-				<a class="social__link" href="./">
-					<img src="./images/social-yout.svg" alt="">
-				</a>
-			</div>
+			@@include("_social.html", { cls: "contact__social"})
 		</div>
 		<form class="contact__form form" action="./">
 			<div class="form__success">
@@ -318,23 +292,23 @@
 			<fieldset class="form__fields">
 				<label class="form__field">
 					<span>Цвет</span>
-					<input type="text" name="color">
+					<input type="text" name="kristal_color">
 				</label>
 				<label class="form__field form__field_required">
 					<span>Имя</span>
-					<input type="text" name="name">
+					<input type="text" name="kristal_name">
 				</label>
 				<label class="form__field form__field_required form__field_half">
 					<span>Телефон</span>
-					<input type="text" name="phone">
+					<input type="text" name="kristal_phone">
 				</label>
 				<label class="form__field form__field_half">
 					<span>Email</span>
-					<input type="text" name="mail">
+					<input type="text" name="kristal_mail">
 				</label>
 				<label class="form__field form__field_required">
 					<span>Сообщение</span>
-					<textarea name="msg"></textarea>
+					<textarea name="kristal_msg"></textarea>
 				</label>
 				<div class="form__alerts"></div>
 			</fieldset>

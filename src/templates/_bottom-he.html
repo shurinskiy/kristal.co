@@ -1,7 +1,7 @@
 <footer class="footer footer_he"> 
 	<div class="footer__book book book_he container">
 		<h2 class="book__title subtitle">הזמינו שירות<br/> עכשיו</h2>
-		<a class="book__button button button_book" href="./">
+		<a class="book__button button button_book" href="tel:+972533907950">
 			<strong><svg><use xlink:href="#ring"></use></svg></strong>
 			<span>להזמנה עכשיו</span>
 		</a>
@@ -16,8 +16,12 @@
 					<a class="footer__link" href="#contact">יצירת קשר</a>
 				</nav>
 				<div class="footer__contact">
-					<a class="footer__pin pin" href="./"><svg><use xlink:href="#ring"></use></svg></a>
-					<a class="footer__pin pin" href="./"><svg><use xlink:href="#wapp"></use></svg></a>
+					<a class="footer__pin pin" href="tel:+972533907950">
+						<svg><use xlink:href="#ring"></use></svg>
+					</a>
+					<a class="footer__pin pin" href="http://wa.me/972533907950" target="_blank">
+						<svg><use xlink:href="#wapp"></use></svg>
+					</a>
 					<div class="footer__phone">
 						<span class="gold">צרו קשר איתנו</span>
 						<a href="tel:+972533907950">+972 53 390 7950</a>
@@ -29,20 +33,7 @@
 			</a>
 			<div class="footer__right">
 				<div class="footer__subscribe">עקבו אחרינו</div>
-				<div class="footer__social social">
-					<a class="social__link" href="./">
-						<img src="./images/social-fboo.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-inst.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-ttok.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-yout.svg" alt="">
-					</a>
-				</div>
+				@@include("_social.html", { cls: "footer__social"})
 			</div>
 		</div>
 		<div class="footer__bottom">
@@ -52,15 +43,7 @@
 		</div>
 	</div>
 </footer>
-
-<div class="call">
-	<a class="call__pin pin" href="./"><svg><use xlink:href="#ring"></use></svg></a>
-	<a class="call__pin pin" href="./"><svg><use xlink:href="#wapp"></use></svg></a>
-	<button class="call__toggle">
-		<svg><use xlink:href="#phone"></use></svg>
-		<svg><use xlink:href="#close"></use></svg>
-	</button>
-</div>
+@@include("_call.html")
 
 @@include("_sprite.svg")
 <script src="common.js?v=0"></script> 

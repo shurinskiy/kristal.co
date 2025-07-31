@@ -4,17 +4,18 @@
 	if (!form) return;
 
 	const fieldset = form?.querySelector('fieldset.form__fields');
-	const fields = form?.querySelectorAll('.form__field input');
+	const fields = form?.querySelectorAll('.form__field input, .form__field textarea');
 	const alerts = form?.querySelector('.form__alerts');
 	const button = form?.querySelector('.form__submit');
 
 	form.addEventListener('submit', async (e) => {
 		e.preventDefault();
-		fieldset.disabled = true;
-		button.disabled = true;
 		
 		const formData = new FormData(e.target);
 		formData.append('lang', document.documentElement.lang || 'ru'); 
+
+		fieldset.disabled = true;
+		button.disabled = true;
 
 		try {
 			// отправляем данные на сервер

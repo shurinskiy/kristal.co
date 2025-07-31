@@ -3,7 +3,15 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 (() => {
 
-	new Swiper(".hero__slider", {
+	const more = document.querySelector('a.hero__more');
+	const slider = document.querySelector('.hero__slider');
+	
+	const updateButton = function(sw) {
+		const anchor = sw.slides[sw.activeIndex].dataset?.anchor;
+		anchor && (more.href = anchor);
+	}
+
+	new Swiper(slider, {
 		modules: [ Autoplay, Pagination, Navigation ],
 		loop: true,
 		speed: 1000,
@@ -21,6 +29,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 		autoplay: { 
 			delay: 10000,
 			disableOnInteraction: true
+		},
+		on: {
+			init: updateButton,
+			slideChange: updateButton
 		}
 	});
 

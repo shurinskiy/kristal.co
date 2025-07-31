@@ -133,6 +133,11 @@
 			@include media('<=xxs') {
 				min-height: 62px;
 			}
+	
+			&.error {
+				border-color: var(--red);
+				box-shadow: 0 0 10px rgba(var(--red-rgb), 0.5);
+			}
 		}
 
 		textarea {
@@ -142,14 +147,10 @@
 				min-height: 135px;
 			}
 		}
-
-		&.error input, &.error textarea {
-			border-color: var(--red);
-			box-shadow: 0 0 10px rgba(var(--red-rgb), 0.5);
-		}
 	}
 
 	&__alerts {
+		grid-column: span 2;
 		color: var(--red);
 		font-size: 14px;
 

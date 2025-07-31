@@ -1,7 +1,7 @@
 <footer class="footer"> 
 	<div class="footer__book book container">
 		<h2 class="book__title subtitle">Забронируйте<br/> услугу сейчас</h2>
-		<a class="book__button button button_book" href="./">
+		<a class="book__button button button_book" href="tel:+972533907950">
 			<strong><svg><use xlink:href="#ring"></use></svg></strong>
 			<span>Забронировать сейчас</span>
 		</a>
@@ -16,33 +16,24 @@
 					<a class="footer__link" href="#contact">Контакты</a>
 				</nav>
 				<div class="footer__contact">
-					<a class="footer__pin pin" href="./"><svg><use xlink:href="#ring"></use></svg></a>
-					<a class="footer__pin pin" href="./"><svg><use xlink:href="#wapp"></use></svg></a>
+					<a class="footer__pin pin" href="tel:+972533907950">
+						<svg><use xlink:href="#ring"></use></svg>
+					</a>
+					<a class="footer__pin pin" href="http://wa.me/972533907950" target="_blank">
+						<svg><use xlink:href="#wapp"></use></svg>
+					</a>
 					<div class="footer__phone">
 						<span class="gold">Связаться с нами</span>
 						<a href="tel:+972533907950">+972 53 390 7950</a>
 					</div>
 				</div>
 			</div>
-			<a class="footer__logo" href="./">
+			<a class="footer__logo" href="./ru.html">
 				<img src="./images/logo.webp" alt="">
 			</a>
 			<div class="footer__right">
 				<div class="footer__subscribe">Подпишись на нас</div>
-				<div class="footer__social social">
-					<a class="social__link" href="./">
-						<img src="./images/social-fboo.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-inst.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-ttok.svg" alt="">
-					</a>
-					<a class="social__link" href="./">
-						<img src="./images/social-yout.svg" alt="">
-					</a>
-				</div>
+				@@include("_social.html", { cls: "footer__social"})
 			</div>
 		</div>
 		<div class="footer__bottom">
@@ -52,15 +43,7 @@
 		</div>
 	</div>
 </footer>
-
-<div class="call">
-	<a class="call__pin pin" href="./"><svg><use xlink:href="#ring"></use></svg></a>
-	<a class="call__pin pin" href="./"><svg><use xlink:href="#wapp"></use></svg></a>
-	<button class="call__toggle">
-		<svg><use xlink:href="#phone"></use></svg>
-		<svg><use xlink:href="#close"></use></svg>
-	</button>
-</div>
+@@include("_call.html")
 
 @@include("_sprite.svg")
 <script src="common.js?v=0"></script> 
